@@ -1,0 +1,26 @@
+2023-04-24 10:22:53,807 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-24 10:23:53,074 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\business\online_data_sync.py changed, reloading.
+2023-04-24 10:23:53,807 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-24 10:24:20,117 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\business\online_data_sync.py changed, reloading.
+2023-04-24 10:24:20,943 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-24 10:24:42,230 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\business\online_data_sync.py changed, reloading.
+2023-04-24 10:24:42,866 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-24 10:25:00,952 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\business\online_data_sync.py changed, reloading.
+2023-04-24 10:25:01,614 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-24 10:26:03,979 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\business\online_data_sync.py changed, reloading.
+2023-04-24 10:26:04,768 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-24 10:26:23,884 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\business\online_data_sync.py changed, reloading.
+2023-04-24 10:26:24,561 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-24 14:59:54,697 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\business\online_data_sync.py changed, reloading.
+2023-04-24 14:59:55,763 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-24 15:00:51,123 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\business\online_data_sync.py changed, reloading.
+2023-04-24 15:00:51,923 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-24 15:01:14,114 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\business\online_data_sync.py changed, reloading.
+2023-04-24 15:01:14,855 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-24 15:01:34,995 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\business\online_data_sync.py changed, reloading.
+2023-04-24 15:01:35,671 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-24 15:01:52,740 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\business\online_data_sync.py changed, reloading.
+2023-04-24 15:01:53,420 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-24 15:02:07,414 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\business\online_data_sync.py changed, reloading.
+2023-04-24 15:02:08,120 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-25 13:38:58,364 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\util\mysql_handle.py changed, reloading.

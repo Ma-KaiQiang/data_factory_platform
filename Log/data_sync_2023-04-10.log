@@ -1,0 +1,2 @@
+2023-04-10 16:34:37,541 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 11:51:02,957 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\ÏîÄ¿\data_factory_platform\data_factory_platform\urls.py changed, reloading.

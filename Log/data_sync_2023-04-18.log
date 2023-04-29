@@ -1,0 +1,23 @@
+2023-04-18 11:30:18,506 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-18 11:32:10,533 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_factory_platform\settings.py changed, reloading.
+2023-04-18 11:32:11,074 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-18 11:32:19,767 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_factory_platform\settings.py changed, reloading.
+2023-04-18 11:32:20,339 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-18 11:32:38,255 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_factory_platform\settings.py changed, reloading.
+2023-04-18 11:32:38,828 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-18 11:33:45,873 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_factory_platform\settings.py changed, reloading.
+2023-04-18 13:50:54,384 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-18 13:50:54,975 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/data_sync/ HTTP/1.1" 200 21613
+2023-04-18 13:50:55,133 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/logo-sm.png HTTP/1.1" 404 3903
+2023-04-18 13:50:55,133 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/users/avatar-1.jpg HTTP/1.1" 404 3924
+2023-04-18 13:50:55,909 [django.server:187] [basehttp:log_message] [INFO] "GET //factory/sync/query_instance/?instance=null&database=null HTTP/1.1" 200 1532
+2023-04-18 13:51:02,525 [django.server:187] [basehttp:log_message] [INFO] "GET //factory/sync/query_db/?instance=nei-mysql-2.43&database=null HTTP/1.1" 200 1436
+2023-04-18 13:51:05,201 [django.server:187] [basehttp:log_message] [INFO] "GET //factory/sync/query_tb/?instance=nei-mysql-2.43&database=mabang HTTP/1.1" 200 4723
+2023-04-18 13:52:07,799 [django.server:187] [basehttp:log_message] [INFO] "GET //factory/sync/query_tb/?instance=nei-mysql-2.43&database=NEW_ZENT HTTP/1.1" 200 688
+2023-04-18 13:52:10,937 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/data_sync/ HTTP/1.1" 200 21521
+2023-04-18 13:52:10,965 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/logo-sm.png HTTP/1.1" 404 3903
+2023-04-18 13:52:10,968 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/users/avatar-1.jpg HTTP/1.1" 404 3924
+2023-04-18 13:52:11,674 [django.server:187] [basehttp:log_message] [INFO] "GET //factory/sync/query_instance/?instance=null&database=null HTTP/1.1" 200 1532
+2023-04-18 13:52:18,629 [django.server:187] [basehttp:log_message] [INFO] "GET //factory/sync/query_db/?instance=nei-tidb-fba&database=null HTTP/1.1" 200 2919
+2023-04-18 13:52:21,871 [django.server:187] [basehttp:log_message] [INFO] "GET //factory/sync/query_tb/?instance=nei-tidb-fba&database=c1_report HTTP/1.1" 200 194836
+2023-04-19 15:51:28,072 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.

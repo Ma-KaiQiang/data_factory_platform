@@ -1,0 +1,79 @@
+2023-04-11 11:51:05,144 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 11:52:13,943 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_factory_platform\urls.py changed, reloading.
+2023-04-11 11:52:15,042 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 11:53:26,078 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_factory_platform\urls.py changed, reloading.
+2023-04-11 11:53:26,562 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 11:53:49,436 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 11:53:50,442 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 11:56:03,026 [django.security.csrf:241] [log:log_response] [WARNING] Forbidden (CSRF cookie not set.): /data_factory/data_sync/
+2023-04-11 11:56:03,026 [django.server:187] [basehttp:log_message] [WARNING] "POST /data_factory/data_sync/ HTTP/1.1" 403 2801
+2023-04-11 11:56:43,153 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 11:56:44,190 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 11:56:46,620 [django.server:187] [basehttp:log_message] [ERROR] "POST /data_factory/data_sync/ HTTP/1.1" 500 74395
+2023-04-11 11:57:01,708 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 11:58:40,425 [django.server:187] [basehttp:log_message] [ERROR] "POST /data_factory/data_sync/ HTTP/1.1" 500 74395
+2023-04-11 12:08:04,909 [django.server:187] [basehttp:log_message] [ERROR] "POST /data_factory/data_sync/ HTTP/1.1" 500 74372
+2023-04-11 12:08:05,368 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 12:08:06,943 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 13:51:42,620 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 13:51:43,863 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 13:51:44,288 [django.server:187] [basehttp:log_message] [ERROR] "POST /data_factory/data_sync/ HTTP/1.1" 500 70783
+2023-04-11 13:52:16,188 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 13:52:16,906 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 13:52:19,374 [django.server:187] [basehttp:log_message] [ERROR] "POST /data_factory/data_sync/ HTTP/1.1" 500 70923
+2023-04-11 13:52:31,375 [django.server:187] [basehttp:log_message] [ERROR] "POST /data_factory/data_sync/ HTTP/1.1" 500 70923
+2023-04-11 13:52:47,947 [django.server:187] [basehttp:log_message] [ERROR] "POST /data_factory/data_sync/ HTTP/1.1" 500 70924
+2023-04-11 13:52:48,693 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 13:52:49,373 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 13:53:41,348 [django.server:187] [basehttp:log_message] [WARNING] "POST /data_factory/ HTTP/1.1" 404 2302
+2023-04-11 13:53:47,791 [django.server:187] [basehttp:log_message] [ERROR] "POST /data_factory/data_sync/ HTTP/1.1" 500 70924
+2023-04-11 13:54:52,299 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 13:54:54,533 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 13:54:59,003 [django.server:187] [basehttp:log_message] [ERROR] "POST /data_factory/data_sync/ HTTP/1.1" 500 70924
+2023-04-11 13:55:24,121 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 13:55:24,570 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 13:55:26,179 [django.server:187] [basehttp:log_message] [ERROR] "POST /data_factory/data_sync/ HTTP/1.1" 500 75004
+2023-04-11 13:56:54,895 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 13:56:56,279 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 13:59:20,928 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 13:59:22,059 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 13:59:25,020 [django.server:187] [basehttp:log_message] [INFO] "POST /data_factory/data_sync/ HTTP/1.1" 200 96
+2023-04-11 14:00:52,536 [django.server:187] [basehttp:log_message] [INFO] "POST /data_factory/data_sync/ HTTP/1.1" 200 4128
+2023-04-11 14:02:00,817 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 14:02:01,941 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 14:02:03,352 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 14:02:03,846 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 14:02:07,341 [django.server:187] [basehttp:log_message] [INFO] "POST /data_factory/data_sync/ HTTP/1.1" 200 28
+2023-04-11 14:05:19,533 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\business\online_data_sync.py changed, reloading.
+2023-04-11 14:05:20,817 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 14:05:23,547 [django.server:187] [basehttp:log_message] [INFO] "POST /data_factory/data_sync/ HTTP/1.1" 200 3444
+2023-04-11 14:10:27,647 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\util\mysql_handle.py changed, reloading.
+2023-04-11 14:10:28,821 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 14:11:11,103 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 14:11:12,277 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 14:11:35,171 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 14:11:35,874 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 14:12:18,918 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 14:12:19,401 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 14:12:42,199 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\views.py changed, reloading.
+2023-04-11 14:12:42,650 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 14:12:45,699 [django.server:187] [basehttp:log_message] [INFO] "POST /data_factory/data_sync/ HTTP/1.1" 200 10
+2023-04-11 14:13:27,286 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\util\mysql_handle.py changed, reloading.
+2023-04-11 14:13:27,726 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 14:13:45,851 [django.server:187] [basehttp:log_message] [INFO] "POST /data_factory/data_sync/ HTTP/1.1" 200 10
+2023-04-11 14:16:56,359 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\util\mysql_handle.py changed, reloading.
+2023-04-11 14:16:56,799 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 14:16:59,523 [django.server:187] [basehttp:log_message] [INFO] "POST /data_factory/data_sync/ HTTP/1.1" 200 10
+2023-04-11 14:18:36,239 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\util\mysql_handle.py changed, reloading.
+2023-04-11 14:18:36,709 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 14:18:42,887 [django.server:187] [basehttp:log_message] [INFO] "POST /data_factory/data_sync/ HTTP/1.1" 200 10
+2023-04-11 14:20:34,926 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\util\mysql_handle.py changed, reloading.
+2023-04-11 14:20:35,372 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 14:20:38,193 [django.server:187] [basehttp:log_message] [INFO] "POST /data_factory/data_sync/ HTTP/1.1" 200 20
+2023-04-11 14:26:01,482 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\util\mysql_handle.py changed, reloading.
+2023-04-11 14:26:01,946 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 14:33:24,535 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\util\mysql_handle.py changed, reloading.
+2023-04-11 14:33:26,015 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-11 14:34:39,425 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\util\mysql_handle.py changed, reloading.
+2023-04-11 14:34:40,545 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
+2023-04-12 15:16:59,932 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\urls.py changed, reloading.

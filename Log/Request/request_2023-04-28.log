@@ -1,0 +1,99 @@
+2023-04-28 10:19:26,230 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-28 10:19:26,232 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-28 10:19:27,281 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/favicon.ico
+2023-04-28 10:20:24,174 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-28 10:20:24,176 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-28 10:20:27,577 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/sync/query_instance/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 48, in get_instance
+    data_ = online.query_instance()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 19, in query_instance
+    headers=headers())
+            ^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 11, in headers
+    header = client.hget('authorization', 'headers')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\client.py", line 3010, in hget
+    return self.execute_command('HGET', name, key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+2023-04-28 10:25:20,301 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-28 10:25:20,303 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-28 10:27:04,441 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-28 10:27:04,444 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-28 10:27:04,527 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/favicon.ico
+2023-04-28 10:29:43,870 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-28 10:29:43,872 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-28 10:59:53,925 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-28 10:59:53,928 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-28 11:01:49,009 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 89, in query
+    data = on.query({
+           ^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 55, in query
+    return res.json()
+           ^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-28 11:18:05,266 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-28 11:18:05,267 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-28 11:21:40,802 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-28 11:21:40,805 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-28 11:21:47,189 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-28 11:21:47,191 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-28 11:22:24,323 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-28 11:22:24,326 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png

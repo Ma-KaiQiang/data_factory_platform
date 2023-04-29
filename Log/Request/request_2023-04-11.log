@@ -1,0 +1,163 @@
+2023-04-11 11:56:46,619 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /data_factory/data_sync/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 15, in online_data_sync
+    online_data = online.query(condition)
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 16, in query
+    'instance_name': condition.get('instance'),
+                     ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2023-04-11 11:58:40,424 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /data_factory/data_sync/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 15, in online_data_sync
+    online_data = online.query(condition)
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 16, in query
+    'instance_name': condition.get('instance'),
+                     ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2023-04-11 12:08:04,908 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /data_factory/data_sync/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 15, in online_data_sync
+    online_data = online.query(condition)
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 16, in query
+    'instance_name': condition.get('instance'),
+                     ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2023-04-11 13:51:44,286 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /data_factory/data_sync/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 14, in online_data_sync
+    condition = request.POST.body
+                ^^^^^^^^^^^^^^^^^
+AttributeError: 'QueryDict' object has no attribute 'body'
+2023-04-11 13:52:19,372 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /data_factory/data_sync/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 14, in online_data_sync
+    condition = request.POST.body
+                ^^^^^^^^^^^^^^^^^
+AttributeError: 'QueryDict' object has no attribute 'body'
+2023-04-11 13:52:31,373 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /data_factory/data_sync/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 14, in online_data_sync
+    condition = request.POST.body
+                ^^^^^^^^^^^^^^^^^
+AttributeError: 'QueryDict' object has no attribute 'body'
+2023-04-11 13:52:47,946 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /data_factory/data_sync/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 14, in online_data_sync
+    condition = request.POST.body
+                ^^^^^^^^^^^^^^^^^
+AttributeError: 'QueryDict' object has no attribute 'body'
+2023-04-11 13:53:41,347 [django.request:241] [log:log_response] [WARNING] Not Found: /data_factory/
+2023-04-11 13:53:47,789 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /data_factory/data_sync/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 14, in online_data_sync
+    condition = request.POST.body
+                ^^^^^^^^^^^^^^^^^
+AttributeError: 'QueryDict' object has no attribute 'body'
+2023-04-11 13:54:58,999 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /data_factory/data_sync/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 14, in online_data_sync
+    condition = request.POST.data
+                ^^^^^^^^^^^^^^^^^
+AttributeError: 'QueryDict' object has no attribute 'data'
+2023-04-11 13:55:26,177 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /data_factory/data_sync/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 17, in online_data_sync
+    online_data = online.query(condition)
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 16, in query
+    'instance_name': condition.get('instance'),
+                     ^^^^^^^^^^^^^
+AttributeError: 'bytes' object has no attribute 'get'

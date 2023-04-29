@@ -1,0 +1,591 @@
+2023-04-25 13:39:09,526 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 13:39:09,527 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 13:39:09,904 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/favicon.ico
+2023-04-25 13:39:13,473 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-25 13:39:13,474 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-25 13:39:13,546 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/favicon.ico
+2023-04-25 13:39:16,040 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 13:39:16,041 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 13:39:16,879 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/sync/query_instance/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 48, in get_instance
+    data_ = online.query_instance()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 20, in query_instance
+    mysql_l = jsonpath(res.json(), '$..data[?(@.db_type=="mysql")].instance_name')
+                       ^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-25 13:40:03,474 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 13:40:03,481 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 13:40:21,761 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 13:40:21,763 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 17:04:04,268 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 17:04:04,269 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 17:04:06,856 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 17:04:06,857 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 17:20:03,032 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/query/
+2023-04-25 17:21:35,879 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 94, in query
+    query_data = on.data_assemble(data)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 64, in data_assemble
+    column_list = jsonpath(data, '$..column_list')[0]
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'bool' object is not subscriptable
+2023-04-25 17:30:28,057 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 95, in query
+    query_data = on.data_assemble(data)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 64, in data_assemble
+    column_list = jsonpath(data, '$..column_list')[0]
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'bool' object is not subscriptable
+2023-04-25 17:31:45,914 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 95, in query
+    query_data = on.data_assemble(data)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 64, in data_assemble
+    column_list = jsonpath(data, '$..column_list')[0]
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'bool' object is not subscriptable
+2023-04-25 17:33:03,087 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 95, in query
+    query_data = on.data_assemble(data)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 64, in data_assemble
+    column_list = jsonpath(data, '$..column_list')[0]
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'bool' object is not subscriptable
+2023-04-25 17:33:34,011 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 95, in query
+    query_data = on.data_assemble(data)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 64, in data_assemble
+    column_list = jsonpath(data, '$..column_list')[0]
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'bool' object is not subscriptable
+2023-04-25 17:35:10,016 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 95, in query
+    query_data = on.data_assemble(data)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 64, in data_assemble
+    column_list = jsonpath(data, '$..column_list')[0]
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'bool' object is not subscriptable
+2023-04-25 17:35:54,565 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 95, in query
+    query_data = on.data_assemble(data)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 64, in data_assemble
+    column_list = jsonpath(data, '$..column_list')[0]
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'bool' object is not subscriptable
+2023-04-25 17:46:59,092 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    print(request.POST.data)
+          ^^^^^^^^^^^^^^^^^
+AttributeError: 'QueryDict' object has no attribute 'data'
+2023-04-25 17:47:02,845 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    print(request.POST.data)
+          ^^^^^^^^^^^^^^^^^
+AttributeError: 'QueryDict' object has no attribute 'data'
+2023-04-25 17:47:17,288 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    print(request.POST.get('instance_name'))
+          ^^^^^^^^^^^^^^^^^
+AttributeError: 'QueryDict' object has no attribute 'data'
+2023-04-25 17:54:08,173 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat=json.loads(request.POST.body)
+                   ^^^^^^^^^^^^^^^^^
+AttributeError: 'QueryDict' object has no attribute 'body'
+2023-04-25 17:54:12,491 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat=json.loads(request.POST.body)
+                   ^^^^^^^^^^^^^^^^^
+AttributeError: 'QueryDict' object has no attribute 'body'
+2023-04-25 17:54:46,427 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat=json.loads(request.POST.body)
+                   ^^^^^^^^^^^^^^^^^
+AttributeError: 'QueryDict' object has no attribute 'body'
+2023-04-25 18:07:01,878 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 18:07:01,883 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 18:09:24,068 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 18:09:24,069 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 18:09:28,802 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 18:09:28,803 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 18:09:32,333 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 18:09:32,334 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 18:10:25,101 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat=json.loads(request.body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-25 18:10:40,525 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat=json.loads(request.body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-25 18:10:45,711 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat=json.loads(request.body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-25 18:11:35,902 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat=json.loads(request.body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-25 18:12:14,323 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat=json.loads(request.body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-25 18:12:26,412 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat=json.loads(request.body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-25 18:12:59,710 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat=json.loads(request.body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-25 18:13:08,064 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 18:13:08,070 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 18:13:10,058 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/favicon.ico
+2023-04-25 18:13:36,280 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat=json.loads(request.body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-25 18:15:53,667 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat=json.loads(request.body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-25 18:20:07,722 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat=json.loads(request.body.decode(encoding='utf8'))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-25 18:20:45,291 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat = json.loads(request.body.decode(encoding='utf8'))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-25 18:20:50,939 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 82, in query
+    pat = json.loads(request.body.decode(encoding='utf8'))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-25 18:21:55,106 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 18:21:55,107 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 18:32:48,818 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 18:32:48,820 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 18:32:50,381 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 18:32:50,394 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 18:32:51,334 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 18:32:51,336 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 18:36:56,213 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 18:36:56,214 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 18:42:58,917 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 18:42:58,919 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 18:47:05,417 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 18:47:05,418 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 19:10:59,647 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 19:10:59,649 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 19:11:23,677 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 19:11:23,679 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 19:11:32,108 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 19:11:32,109 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 19:11:38,614 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 19:11:38,616 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 19:11:52,711 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 19:11:52,713 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 19:12:10,357 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 19:12:10,359 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 19:14:49,941 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 19:14:49,942 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 19:36:40,636 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 19:36:40,638 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 19:36:45,507 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 19:36:45,516 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 19:36:46,586 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/favicon.ico
+2023-04-25 19:49:33,818 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 19:49:33,819 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-25 19:57:03,689 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-25 19:57:03,691 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg

@@ -1,0 +1,153 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block intranet_data_config %}
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="mt-1 header-title " style="font-weight:bold">内网数据库配置</h4>
+                    <hr style="filter: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color="#6f5499"
+                        size="10"/>
+                    <button type="button" class="btn btn-outline-primary waves-effect waves-light"
+                            onclick="add_config()"
+                            data-toggle="modal"
+                            data-target="#addConfig">新增
+                    </button>
+                    <div id="addConfig" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered ">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" id="modalHeader">新增配置</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal" method="post" action="/factory/intranet/add/">
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">名称</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" type="text" value="" name="config-name">
+                                            </div>
+                                            <label class="col-sm-2 col-form-label">Host</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" type="text" value="" name="config-host">
+                                            </div>
+                                            <label class="col-sm-2 col-form-label">端口</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" type="text" value="3306" name="config-port">
+                                            </div>
+                                            <label class="col-sm-2 col-form-label">用户名</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" type="text" value="" name="config-user">
+                                            </div>
+                                            <label class="col-sm-2 col-form-label">密码</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" type="password" value=""
+                                                       name="config-password">
+                                            </div>
+                                            <label class="col-sm-2 col-form-label">备注</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" type="text" value="" name="config-remark">
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-primary waves-effect waves-light">保存
+                                            </button>
+                                            <button type="button" class="btn btn-danger waves-effect"
+                                                    data-dismiss="modal">
+                                                取消
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+                    <div class="table-responsive">
+                        <table class="table table-striped mb-0">
+                            <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>名称</th>
+                                <th>Host</th>
+                                <th>port</th>
+                                <th>备注</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            {% for datum in data %}
+                                <tr>
+                                    <td scope="row">{{ forloop.counter }}</td>
+                                    <td>{{ datum.name }}</td>
+                                    <td>{{ datum.host }}</td>
+                                    <td>{{ datum.port }}</td>
+                                    <td>{{ datum.remark }}</td>
+                                    <td>
+                                        <a href="#" class="m-r-10 text-blue-grey "
+                                           onclick="edit_config('{{ datum.name }}','{{ datum.host }}','{{ datum.port }}','{{ datum.user }}','{{ datum.password }}','{{ datum.remark }}')"
+                                           title="编辑"><i class="mbri-edit2"
+                                                           data-toggle="modal"
+                                                           data-target="#addConfig"></i></a>
+                                        <a href="#" class="m-r-10 text-danger" onclick="delete_config('{{ datum.id }}')"
+                                           title="删除"><i
+                                                class="mbri-trash "></i></a>
+                                        <a href="#" class="text-success" onclick="" title="测试连接"><i
+                                                class="dripicons-retweet"></i></a>
+
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var config_name = document.getElementsByName('config-name')[0];
+        var config_host = document.getElementsByName('config-host')[0];
+        var config_port = document.getElementsByName('config-port')[0];
+        var config_user = document.getElementsByName('config-user')[0];
+        var config_password = document.getElementsByName('config-password')[0];
+        var config_remark = document.getElementsByName('config-remark')[0];
+        var header = document.getElementById('modalHeader');
+        var form = document.getElementsByTagName('form')[0];
+        var edit_config = function (name, host, port, user, password,
+                                    remark
+            ) {
+                config_name.getAttributeNode('value').value = name;
+                config_host.getAttributeNode('value').value = host;
+                config_port.getAttributeNode('value').value = port;
+                config_user.getAttributeNode('value').value = user;
+                config_password.getAttributeNode('value').value = password;
+                config_remark.getAttributeNode('value').value = remark;
+                header.innerHTML = '编辑配置';
+                form.getAttributeNode('action').value = '/factory/intranet/edit/'
+            }
+        ;
+        var add_config = function () {
+            header.innerHTML = '新增配置'
+            form.getAttributeNode('action').value = '/factory/intranet/add/'
+        };
+        var delete_config = function (id) {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                url: "http://127.0.0.1:8001/factory/intranet/delete/",
+                dataType: 'json',
+                data: JSON.stringify({"id": id}),
+                success: function (data) {
+                    console.log(data);
+                    location.reload()
+                }
+            });
+
+        }
+
+    </script>
+{% endblock %}

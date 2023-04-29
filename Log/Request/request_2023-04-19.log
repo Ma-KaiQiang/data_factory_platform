@@ -1,0 +1,176 @@
+2023-04-19 17:02:54,478 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-19 17:02:54,481 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-19 17:02:54,551 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/favicon.ico
+2023-04-19 17:02:57,491 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-19 17:02:57,492 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-19 17:02:57,658 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/sync/query_instance/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 48, in get_instance
+    data_ = online.query_instance()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 19, in query_instance
+    headers=header())
+            ^^^^^^^^
+TypeError: 'NoneType' object is not callable
+2023-04-19 17:04:52,936 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-19 17:04:52,938 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-19 17:07:33,432 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-19 17:07:33,433 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-19 17:07:33,513 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/favicon.ico
+2023-04-19 17:07:47,178 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-19 17:07:47,178 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-19 19:29:29,420 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-19 19:29:29,421 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-19 19:29:50,012 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-19 19:29:50,013 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-19 19:31:07,870 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-19 19:31:07,871 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-19 19:36:46,339 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-19 19:36:46,340 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-19 19:37:50,398 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-19 19:37:50,399 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-19 19:39:58,212 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-19 19:39:58,213 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-19 19:42:14,972 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-19 19:42:14,972 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-19 19:43:51,700 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-19 19:43:51,701 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-20 16:50:15,488 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-20 16:50:15,489 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-20 16:50:16,557 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/favicon.ico
+2023-04-20 16:50:22,708 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-20 16:50:22,709 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-20 16:50:23,894 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/sync/query_instance/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 48, in get_instance
+    data_ = online.query_instance()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 20, in query_instance
+    mysql_l = jsonpath(res.json(), '$..data[?(@.db_type=="mysql")].instance_name')
+                       ^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-20 16:50:23,939 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/favicon.ico
+2023-04-20 16:53:45,106 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-20 16:53:45,109 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-20 16:53:51,166 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-20 16:53:51,189 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-20 16:55:10,644 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-20 16:55:10,646 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-20 16:55:34,021 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-20 16:55:34,022 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-20 16:56:18,620 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-20 16:56:18,636 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-20 16:58:03,124 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-20 16:58:03,128 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-20 17:14:55,652 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-20 17:14:55,667 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-20 17:16:54,225 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-20 17:16:54,226 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-21 09:56:28,033 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-21 09:56:28,034 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-21 09:56:29,508 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/sync/query_instance/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 48, in get_instance
+    data_ = online.query_instance()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 20, in query_instance
+    mysql_l = jsonpath(res.json(), '$..data[?(@.db_type=="mysql")].instance_name')
+                       ^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-21 09:56:29,539 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/favicon.ico
+2023-04-21 09:58:55,558 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-21 09:58:55,561 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-21 09:58:56,182 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/sync/query_instance/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 48, in get_instance
+    data_ = online.query_instance()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 20, in query_instance
+    mysql_l = jsonpath(res.json(), '$..data[?(@.db_type=="mysql")].instance_name')
+                       ^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-04-21 09:59:55,951 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-21 09:59:55,952 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-21 11:48:23,116 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-21 11:48:23,119 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg

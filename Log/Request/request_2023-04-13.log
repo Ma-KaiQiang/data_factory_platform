@@ -1,0 +1,851 @@
+2023-04-13 09:42:09,131 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/get_intranet_config/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 40, in get_intranet_config
+    data_l = DataFactoryIntranetConfig.objects.values_list("name", "host", "port", "remark",flat=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1305, in values_list
+    raise TypeError(
+TypeError: 'flat' is not valid when values_list is called with more than one field.
+2023-04-13 09:42:42,957 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/get_intranet_config/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 40, in get_intranet_config
+    data_l = DataFactoryIntranetConfig.objects.values_list("name", "host", "port", "remark",flat=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1305, in values_list
+    raise TypeError(
+TypeError: 'flat' is not valid when values_list is called with more than one field.
+2023-04-13 09:53:08,076 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/get_intranet_config/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 41, in get_intranet_config
+    data_l = DataFactoryIntranetConfig.objects.values_list(fields=fields)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: QuerySet.values_list() got an unexpected keyword argument 'fields'
+2023-04-13 09:53:34,236 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/get_intranet_config/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 41, in get_intranet_config
+    data_l = DataFactoryIntranetConfig.objects.values_list(*fields)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: QuerySet.values_list() got an unexpected keyword argument 'fields'
+2023-04-13 10:09:29,852 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/get_intranet_config/
+2023-04-13 10:11:51,448 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/get_intranet_config/
+2023-04-13 10:12:02,734 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 10:12:02,736 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 10:12:03,082 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/favicon.ico
+2023-04-13 10:12:41,933 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 10:12:41,934 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 10:16:13,030 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 10:16:13,030 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 10:18:44,777 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 10:18:44,778 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 10:35:25,552 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 10:35:25,553 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 10:50:39,100 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 10:50:39,134 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 10:57:07,279 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 10:57:07,280 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 10:58:11,849 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 10:58:11,849 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 10:58:45,457 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 10:58:45,458 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 10:59:09,871 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 10:59:09,872 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:06:32,820 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:06:32,821 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:07:00,014 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:07:00,015 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:08:04,168 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:08:04,169 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:09:22,428 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:09:22,429 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:13:28,701 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:13:28,702 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:13:57,272 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:13:57,273 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:18:20,931 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:18:20,950 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:34:32,767 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:34:32,791 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:34:36,960 [django.request:241] [log:log_response] [WARNING] Not Found: /intranet/edit/
+2023-04-13 11:35:13,372 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:35:13,374 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:35:16,361 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/list/factory/intranet/edit/
+2023-04-13 11:36:04,761 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:36:04,787 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:36:07,975 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/intranet/edit/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 66, in update_intranet_config
+    DataFactoryIntranetConfig.save(obj)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 768, in save
+    self._prepare_related_fields_for_save(operation_name="save")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute '_prepare_related_fields_for_save'
+2023-04-13 11:36:27,147 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:36:27,148 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:36:48,208 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:36:48,209 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:41:03,670 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:41:03,671 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:41:36,821 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:41:36,824 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:41:50,319 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:41:50,333 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:42:05,781 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:42:05,782 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:45:04,721 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:45:04,722 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:48:30,735 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:48:30,736 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:48:40,354 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 11:48:40,354 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:48:43,730 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 11:48:43,731 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 13:40:13,729 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/intranet/add/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'user' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 53, in add_intranet_config
+    obj = DataFactoryIntranetConfig.objects.create(name=name, host=host, port=port, remark=remark)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 1006, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 1047, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1790, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'user' in 'field list'")
+2023-04-13 13:47:37,679 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/intranet/list/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 't_intranet_config.user' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 41, in get_intranet_config
+    data_l = list(DataFactoryIntranetConfig.objects.values_list(*fields))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 394, in __iter__
+    self._fetch_all()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 242, in __iter__
+    return compiler.results_iter(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1349, in results_iter
+    results = self.execute_sql(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 't_intranet_config.user' in 'field list'")
+2023-04-13 13:47:48,665 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/intranet/list/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 't_intranet_config.user' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 41, in get_intranet_config
+    data_l = list(DataFactoryIntranetConfig.objects.values_list(*fields))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 394, in __iter__
+    self._fetch_all()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 242, in __iter__
+    return compiler.results_iter(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1349, in results_iter
+    results = self.execute_sql(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 't_intranet_config.user' in 'field list'")
+2023-04-13 13:49:44,949 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 13:49:44,950 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 13:50:04,591 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/intranet/add/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1048, "Column 'user' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 53, in add_intranet_config
+    obj = DataFactoryIntranetConfig.objects.create(name=name, host=host, port=port, remark=remark)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 1006, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 1047, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1790, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\mysql\base.py", line 80, in execute
+    raise IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'user' cannot be null")
+2023-04-13 13:51:02,212 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 13:51:02,270 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 13:51:20,646 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 13:51:20,648 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 13:52:39,763 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 13:52:39,764 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 13:56:08,454 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 13:56:08,455 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 13:56:14,661 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 13:56:14,662 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 13:56:25,308 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 13:56:25,309 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 13:57:47,938 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 13:57:47,939 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 13:57:50,742 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 13:57:50,743 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 13:57:59,856 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 13:57:59,857 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 13:58:25,405 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 13:58:25,407 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 13:59:27,839 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 13:59:27,841 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 13:59:43,859 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 13:59:43,859 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:01:14,021 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 14:01:14,022 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:04:36,518 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 14:04:36,519 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:06:20,457 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 14:06:20,458 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:07:17,756 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:07:17,757 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 14:07:29,152 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:07:29,154 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 14:07:35,029 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:07:35,030 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 14:08:13,664 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 14:08:13,665 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:08:34,122 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:08:34,123 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 14:16:54,614 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:16:54,615 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 14:17:01,936 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:17:01,938 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 14:18:17,447 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 14:18:17,448 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:18:42,181 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 14:18:42,182 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:18:45,383 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 14:18:45,385 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:51:04,890 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 14:51:04,891 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 15:49:18,755 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 15:49:18,756 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 15:49:26,856 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/list/index.html
+2023-04-13 15:53:07,139 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 15:53:07,153 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 15:53:07,464 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 15:53:07,467 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 15:53:09,723 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 15:53:09,724 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 15:54:19,840 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 15:54:19,853 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 15:54:44,922 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 15:54:44,940 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:03:41,521 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:03:41,539 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:05:03,507 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:05:03,521 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:07:40,546 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:07:40,561 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:09:50,842 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:09:50,856 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:10:13,359 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:10:13,360 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:10:30,541 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:10:30,548 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:13:44,864 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:13:44,868 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:14:54,376 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:14:54,390 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:14:54,701 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:14:54,702 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:15:08,323 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 16:15:08,330 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 16:17:20,547 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:17:20,553 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:18:01,488 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:18:01,504 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:20:09,854 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:20:09,867 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:20:43,441 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:20:43,455 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:20:48,330 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:20:48,348 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:22:18,652 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:22:18,664 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:22:46,770 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:22:46,786 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:22:56,749 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:22:56,768 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:26:51,180 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:26:51,226 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:26:51,690 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/favicon.ico
+2023-04-13 16:28:38,811 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:28:38,813 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:33:51,348 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:33:51,350 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:42:20,661 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:42:20,662 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:42:31,887 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:42:31,888 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:45:08,570 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:45:08,594 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:49:01,891 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:49:01,892 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:53:48,761 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:53:48,763 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:54:11,558 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:54:11,559 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:54:35,834 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:54:35,862 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:55:31,145 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:55:31,158 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:55:38,387 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 16:55:38,394 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 16:55:38,611 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/favicon.ico
+2023-04-13 16:55:55,490 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-13 16:55:55,516 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-13 16:56:48,386 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:56:48,387 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:57:54,957 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:57:54,971 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:58:14,638 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:58:14,653 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:58:25,129 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:58:25,162 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:58:43,800 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:58:43,824 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 16:59:31,173 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 16:59:31,175 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:00:11,662 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:00:11,701 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:01:49,329 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:01:49,331 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:01:56,480 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:01:56,528 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:03:57,900 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:03:57,915 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:04:09,948 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:04:09,977 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:06:28,804 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:06:28,827 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:06:53,797 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:06:53,806 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:07:19,112 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:07:19,130 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:07:50,448 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:07:50,454 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:09:39,224 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:09:39,232 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:09:53,143 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:09:53,144 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:09:59,920 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:09:59,921 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:10:26,504 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:10:26,505 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:11:13,089 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:11:13,090 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:12:05,249 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:12:05,250 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:20:32,615 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:20:32,616 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:52:34,958 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:52:34,978 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:54:20,975 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:54:20,976 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:57:24,629 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:57:24,631 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:57:56,019 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:57:56,043 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:58:18,502 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:58:18,535 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 17:59:36,607 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 17:59:36,625 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 18:01:26,061 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 18:01:26,081 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 18:02:11,374 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 18:02:11,374 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 18:03:51,380 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 18:03:51,381 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 18:06:24,942 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 18:06:24,944 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 18:54:35,435 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 18:54:35,436 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 18:54:48,960 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 18:54:48,961 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:08:02,149 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:08:02,157 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 19:09:49,431 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:09:49,432 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 19:12:30,972 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:12:30,973 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 19:21:32,873 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:21:32,881 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 19:22:04,642 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:22:04,649 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 19:22:19,069 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:22:19,070 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 19:25:03,481 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:25:03,483 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 19:26:21,987 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:26:21,999 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 19:27:50,195 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 19:27:50,197 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:29:47,330 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:29:47,343 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 19:31:41,671 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:31:41,680 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 19:32:03,010 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:32:03,024 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 19:33:30,884 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:33:30,912 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 19:34:11,291 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:34:11,324 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-13 19:34:37,488 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-13 19:34:37,503 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 10:06:04,816 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 10:06:04,824 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 10:06:08,965 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 10:06:08,967 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 10:06:57,477 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 10:06:57,479 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 10:18:47,900 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 10:18:47,907 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 10:40:59,956 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 10:40:59,958 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 10:55:01,684 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 10:55:01,686 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 10:56:18,925 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 10:56:18,926 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 10:56:29,050 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 10:56:29,051 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 11:30:51,767 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 11:30:51,772 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 11:31:24,617 [django.request:241] [log:log_response] [WARNING] Not Found: /favicon.ico
+2023-04-14 11:35:58,302 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 11:35:58,316 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 11:44:21,405 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 11:44:21,407 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 11:48:45,977 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 11:48:45,979 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 11:53:10,327 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 11:53:10,329 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 11:54:18,049 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 11:54:18,061 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 11:54:55,833 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 11:54:55,834 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 11:55:14,216 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 11:55:14,218 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 11:55:39,488 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 11:55:39,489 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 13:50:16,653 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 13:50:16,657 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 13:50:28,998 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 13:50:29,035 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 13:50:56,190 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 13:50:56,191 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 13:53:11,450 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 13:53:11,453 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 13:53:46,766 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 13:53:46,767 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 13:53:59,496 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 13:53:59,497 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 13:54:20,549 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 13:54:20,550 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 13:54:40,369 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 13:54:40,370 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 13:54:48,418 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 13:54:48,419 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 13:55:15,967 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 13:55:15,985 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 13:55:22,464 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 13:55:22,483 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:47:17,389 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:47:17,430 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:48:07,725 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:48:07,744 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:49:50,556 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:49:50,596 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:50:04,535 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:50:04,536 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:50:06,463 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:50:06,465 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:50:12,581 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:50:12,582 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:50:42,240 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:50:42,241 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:51:06,224 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:51:06,227 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:51:10,725 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:51:10,727 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:51:15,858 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:51:15,859 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:51:35,721 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:51:35,722 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:51:38,473 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:51:38,474 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:51:46,192 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:51:46,198 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:51:55,300 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:51:55,302 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:51:57,921 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:51:57,923 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:51:59,153 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:51:59,154 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:52:03,697 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:52:03,699 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:52:10,216 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:52:10,217 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:52:17,640 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:52:17,641 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:52:38,301 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:52:38,313 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:53:01,397 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:53:01,398 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 14:53:28,033 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 14:53:28,036 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 15:00:13,022 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 15:00:13,030 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 15:00:42,074 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 15:00:42,076 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 15:02:15,316 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 15:02:15,317 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 15:02:29,704 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 15:02:29,706 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 15:06:03,428 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 15:06:03,430 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:13:34,376 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:13:34,377 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:20:30,441 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:20:30,442 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:21:31,474 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:21:31,475 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:21:56,567 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:21:56,568 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:24:12,232 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:24:12,234 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:27:21,845 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:27:21,846 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:27:37,841 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:27:37,843 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:28:22,089 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:28:22,090 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:28:57,588 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:28:57,589 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:29:48,574 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:29:48,575 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:30:15,233 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:30:15,299 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:31:01,276 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:31:01,277 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:41:05,112 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:41:05,141 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:46:52,798 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:46:52,800 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:48:10,327 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:48:10,329 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:49:04,957 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:49:04,960 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:49:48,945 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:49:48,946 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:50:22,216 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:50:22,218 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:51:15,394 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:51:15,396 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:51:25,984 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:51:25,985 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:51:32,529 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:51:32,531 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:51:58,488 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:51:58,490 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:52:05,396 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:52:05,397 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:52:18,242 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:52:18,243 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:52:46,368 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:52:46,369 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:52:58,144 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:52:58,146 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:53:22,738 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:53:22,739 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:53:42,053 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:53:42,054 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:53:50,078 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:53:50,080 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 17:55:02,348 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 17:55:02,350 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 18:12:02,028 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 18:12:02,062 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 18:14:38,990 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 18:14:38,991 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 18:16:57,114 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 18:16:57,116 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 18:17:11,307 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 18:17:11,308 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-14 18:19:24,155 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-14 18:19:24,156 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-14 18:19:30,620 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-04-14 18:19:30,622 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-04-14 18:20:12,284 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-14 18:20:12,285 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-04-17 09:43:07,088 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-04-17 09:43:07,089 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
