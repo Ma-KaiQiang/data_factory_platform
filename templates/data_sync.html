@@ -87,8 +87,11 @@
                     <a role="tab">查询结果</a>
                 </li>
             </ul>
-            <div id="tb_content" class="form-group tab-content">
-                <div id="query_result" class="tab-pane fade table-responsive active in">
+            <div id="tb_content" class="tab-content">
+                <div id="resultTab" class="tab-pane active">
+                    <div class="table-responsive">
+                        <table id="query_result"></table>
+                    </div>
 
 
                 </div>
@@ -231,89 +234,55 @@
             var result = data.data;
             if (result['column_list']) {
                 //异步获取要动态生成的列
-                var columns = [];
+                var columns = [{
+                    checkbox: true
+                }];
                 $.each(result['column_list'], function (i, column) {
                     columns.push({
                         "field": i,
                         "title": column,
-                        //"visible": true,
+                        align: 'center',
                         "sortable": true,
                     });
                 });
-                if (result['full_sql'].match(/^show\s+create\s+table/)) {
-                    //初始化表结构显示
-                    $("#" + ("query_result")).bootstrapTable('destroy').bootstrapTable({
-                            escape: false,
-                            data: result['rows'],
-                            columns: [{
-                                title: 'Create Table',
-                                field: 1,
-                                formatter: function (value, row, index) {
-                                    let sql = window.sqlFormatter.format(value);
-                                    //替换标签
-                                    sql = sql.replace(/&/g, "&amp;");
-                                    sql = sql.replace(/</g, "&lt;");
-                                    sql = sql.replace(/>/g, "&gt;");
-                                    sql = sql.replace(/"/g, "&quot;");
-                                    //替换所有的换行符
-                                    sql = sql.replace(/\r\n/g, "<br>");
-                                    sql = sql.replace(/\n/g, "<br>");
-                                    //替换所有的空格
-                                    return sql;
-                                },
+                //初始化查询结果
+                $("#" + ('query_result')).bootstrapTable('destroy').bootstrapTable({
+                    escape: true,
+                    data: result['rows'],
+                    columns: columns,
+                    undefinedText: 'null',
+                    showColumns: true,   //是否显示所有的列
+                    showToggle: true,
+                    clickToSelect: true,
+                    striped: true,
+                    pagination: true,
+                    showRefresh: true, //是否显示刷新按钮
+                    pageSize: 30,//每页的记录行数（*）
+                    pageList: [10, 20, 30, 50], //可供选择的每页的行数（*）
+                    paginationPreText: "上一页",
+
+                    paginationNextText: "下一页",
+                    search: true,                      //是否显示表格搜索
+                    strictSearch: false,                //是否全匹配搜索
+                    onLoadSuccess: function (data) { //加载成功时执行
+                        console.log(data);
+                    },
+                    onLoadError: function (res) { //加载失败时执行
+                        console.log(res);
+                    }
+                    //格式化详情
+                    detailFormatter: function (index, row) {
+                        var html = [];
+                        $.each(row, function (key, value) {
+                            if (key === 0) {//mongodb这里要修改
+                                html.push('<pre>' + highLight(value) + '</pre>');
                             }
-                            ],
-                            locale: 'zh-CN'
-                        }
-                    );
-                } else {
-                    //初始化查询结果
-                    $("#" + ('query_result')).bootstrapTable('destroy').bootstrapTable({
-                        escape: true,
-                        data: result['rows'],
-                        columns: columns,
-                        showExport: true,
-                        exportDataType: "all",
-                        exportTypes: ['json', 'sql', 'csv', 'txt', 'xml', 'xlsx'],
-                        exportOptions: {
-                            //ignoreColumn: [0],  //忽略某些列的索引数组
-                            fileName: 'export_result'  //文件名称设置
-                        },
-                        undefinedText: 'null',
-                        showColumns: true,
-                        showToggle: true,
-                        clickToSelect: true,
-                        striped: true,
-                        pagination: true,
-                        showRefresh: true,
-                        pageSize: 30,
-                        pageList: [10, 20, 30, 50],
-                        paginationPreText: "上一页",
-                        paginationNextText: "下一页",
-                        search: true,                      //是否显示表格搜索
-                        strictSearch: false,                //是否全匹配搜索
-                        //格式化详情
-                        //detailFormatter: function (index, row) {
-                          //  var html = [];
-                          //  $.each(row, function (key, value) {
-                             //   if (key === 0) {//mongodb这里要修改
-                                  //  let rs = value;
-                                 //   html.push('<pre>' + highLight(rs) + '</pre>');
-                               // }
-                          //  });
-                            //return html.join('');
-                      //  },
-                        locale: 'zh-CN'
-                    });
-                }
-                //执行时间和脱敏时间赋值
-                {#$("#" + ('time') + n).text(result['query_time'] + ' sec');#}
-                {#$("#" + ('masking_time') + n).text(result['mask_time'] + ' sec');#}
-                //主从延迟赋值，仅在出现延迟时展示，null和0都不展示
-                //if (result['seconds_behind_master']) {
-                //  $("#seconds_behind_master").text('Seconds_Behind_Master:  ' + result['seconds_behind_master']);
-                //}
-            } else {
+                        });
+                        return html.join('');
+                    },
+                    locale: 'zh-CN'
+                });
+
                 //查询报错失败信息
                 if (active_li_title.match(/^执行结果\d$/)) {
                     n = active_li_id.split("execute_result_tab")[1];
@@ -356,23 +325,17 @@
                 url: "http://127.0.0.1:8001/factory/query/",
                 dataType: "json",
                 data: JSON.stringify({
-                    instance_name: $("#query_instance").val(),
-                    db_name: $("#query_db").val(),
-                    tb_name: $("#query_tb").val(),
-                    sql_content: sqlContent,
-                    limit_num: $("#limit_num").val()
+                    instance_name: 'pubic-mabang', //$("#query_instance").val(),
+                    db_name: 'mabang',//$("#query_db").val(),
+                    tb_name: 'DB_Shop',//$("#query_tb").val(),
+                    sql_content: 'select * from DB_Shop;',//sqlContent,
+                    limit_num: 50//$("#limit_num").val()
                 }),
-                //complete: function () {
-                // $('input[type=button]').removeClass('disabled');
-                //$('input[type=button]').prop('disabled', false);
-                //optgroup_control();
-                //},
                 success: function (data) {
                     console.log(data)
                     display_data(data)
                 },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    console.log(11111)
                     alert(errorThrown);
                 }
             });

@@ -1,0 +1,542 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block data_sync %}
+    <style>
+        /*必须给editor包裹元素设置宽高*/
+        #editor {
+            width: 100%;
+            height: 350px;
+        }
+    </style>
+
+    <form class="form-horizontal">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="card m-b-20">
+                    <div class="card-body">
+                        <h4 class="mt-0 header-title" style="font-weight:bold">数据同步</h4>
+                        <hr style="filter: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color="#6f5499"
+                            size="10"/>
+                        <pre id='editor'>
+
+                        </pre>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="card m-b-20">
+                    <div class="card-body">
+                        <h4 class="mt-0 header-title" style="font-weight:bold">查询条件</h4>
+                        <hr style="filter: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color="#6f5499"
+                            size="10"/>
+                        <div class="form-group">
+                            <select id="query_instance" name="instance_name" onchange="initDatabase()"
+                                    class="selectpicker form-control border"
+                                    data-live-search="true" data-live-search-placeholder="搜索您所在组的实例"
+                                    title="请选择实例:" data-placeholder="请选择实例:" tabindex=“-98”>
+                                <optgroup id="instance" label="MySQL">
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="query_db" name="db_name" onchange="initTable()"
+                                    class="selectpicker form-control border"
+                                    data-live-search="true" data-live-search-placeholder="搜索您要查询的数据库"
+                                    title="请选择数据库:" data-placeholder="请选择数据库:">
+                                <optgroup id="database" label="数据库">
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="query_tb" name="table_name" class="selectpicker form-control border"
+                                    data-live-search="true"
+                                    data-live-search-placeholder="搜索您要查询的表"
+                                    title="查询表数据" data-placeholder="查看表数据">
+                                <optgroup id="table" label="数据表">
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="limit_num" name="limit_num" class="selectpicker form-control border"
+                                    title="返回行数" data-placeholder="请选择返回行数:">
+                                <optgroup id="limit" label="返回行数">
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="500">500</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input id="btn-format" type="button" class="btn btn-info" value="美化">
+                            <input id="btn-sqlquery" type="button" class="btn btn-success" onclick="validate()"
+                                   value="执行查询">
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end row -->
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-lg-12">
+            {#            <div class="card m-b-20">#}
+            {#                <div class="card-body">#}
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active">
+                    <a role="tab">查询结果</a>
+                </li>
+            </ul>
+            <div id="tb_content" class="tab-content">
+                <div id="resultTab" class="tab-pane active">
+                    <div class="table-responsive">
+                        <table id="query_result"></table>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    {#        </div>#}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-language_tools.js"
+            type="text/javascript"></script>
+    <!-- ace edit配置 -->
+    <script>
+        //初始化id字符串（不加#）
+        var editor = ace.edit('editor');
+        editor.setOptions({
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true
+        });
+        //设置主题
+        editor.setTheme("ace/theme/textmate");
+        // 设置编辑语言
+        editor.getSession().setMode("ace/mode/sql");
+        // 设置字体大小
+        editor.setFontSize(15);
+        // 启用提示菜单
+        ace.require("ace/ext/language_tools");
+
+    </script>
+    <!-- 查询条件 -->
+    <script>
+        window.onload = function () {
+            // 动态加载省份选项数据
+            initSelectOptions("instance", "query_instance");
+        };// onReady
+        function removeAll(ele) {
+            //根据id查找对象，
+            var selectObj = document.getElementById(ele);
+            //将select的options置为0
+            selectObj.options.length = 0;
+        }
+
+        /**
+         * 动态生成select选项
+         * @param selectId
+         * @param parentId
+         * @param instance
+         * @param database
+         * @returns
+         */
+
+        function initSelectOptions(selectId, parentId, instance = null, database = null) {
+            var selectObj = $("#" + selectId);
+            var optgroupObj = $("#" + parentId);
+            $.ajax({
+                url: "http://127.0.0.1:8001/factory/sync/" + parentId + '/',
+                async: false,
+                type: "GET",
+                data: "instance=" + instance + '&' + "database=" + database,
+                success: function (result) {
+                    if (result.success) {
+                        var configs = result.data;
+                        selectObj.find().remove();
+                        for (var i in configs) {
+                            var optionValue = configs[i];
+                            console.log(optionValue)
+                            selectObj.append(new Option(optionValue, optionValue));
+                        }
+                        // 刷新select
+                        optgroupObj.selectpicker('refresh');
+                    } else {
+                        console.log('获取[' + parentId + ']信息失败，原因：' + result.errorMessage);
+                    }
+                },
+                error: function (result) {
+                    console.log('获取[' + parentId + ']信息失败，原因：' + result.errorMessage);
+                }
+            });// ajax
+        }
+
+        function initDatabase() {
+            // 当实例变更清除数据库，表并刷新
+            removeAll('query_db');
+            removeAll('query_tb');
+            $("#query_tb").selectpicker('refresh');
+            $("#limit_num").selectpicker('refresh');
+            var instanceSel = $("#query_instance").val();
+            initSelectOptions('database', 'query_db', instanceSel);
+
+
+        }
+
+        function initTable() {
+            // 当数据库变更时，清空表并刷新
+            var instanceSel = $("#query_instance").val();
+            var dbSel = $("#query_db").val();
+            removeAll('query_tb');
+            $("#query_tb").selectpicker('refresh');
+            initSelectOptions('table', 'query_tb', instanceSel, dbSel);
+        }
+
+        function sqlquery_validate() {
+            var result = true;
+            var instance_name = $("#query_instance").val();
+            var db_name = $("#query_db").val();
+            var sqlContent = editor.getValue();
+
+            var select_sqlContent = editor.session.getTextRange(editor.getSelectionRange());
+            if (select_sqlContent) {
+                sqlContent = select_sqlContent
+            }
+            if (!instance_name) {
+                alert("请选择实例！");
+                return result = false;
+            } else if (!db_name) {
+                alert("请选择数据库！");
+                return result = false;
+            } else if (!sqlContent) {
+                alert("SQL内容不能为空！");
+                return result = false;
+            }
+            return result;
+        }
+
+        //先做表单验证，验证成功再成功提交查询请求
+        var validate = function () {
+            if (sqlquery_validate()) {
+                {#$('input[type=button]').addClass('disabled');#}
+                {#$('input[type=button]').prop('disabled', true);#}
+                sqlquery();
+            }
+        };
+    </script>
+    <script>
+        //展示数据
+        function display_data(data) {
+            var result = data.data;
+            if (result['column_list']) {
+                //异步获取要动态生成的列
+                var columns = [];
+                $.each(result['column_list'], function (i, column) {
+                    columns.push({
+                        "field": i,
+                        "title": column,
+                        //"visible": true,
+                        "sortable": true,
+                    });
+                });
+                if (result['full_sql'].match(/^show\s+create\s+table/)) {
+                    //初始化表结构显示
+                    $("#" + ("query_result")).bootstrapTable('destroy').bootstrapTable({
+                            escape: false,
+                            data: result['rows'],
+                            columns: [{
+                                title: 'Create Table',
+                                field: 1,
+                                formatter: function (value, row, index) {
+                                    let sql = window.sqlFormatter.format(value);
+                                    //替换标签
+                                    sql = sql.replace(/&/g, "&amp;");
+                                    sql = sql.replace(/</g, "&lt;");
+                                    sql = sql.replace(/>/g, "&gt;");
+                                    sql = sql.replace(/"/g, "&quot;");
+                                    //替换所有的换行符
+                                    sql = sql.replace(/\r\n/g, "<br>");
+                                    sql = sql.replace(/\n/g, "<br>");
+                                    //替换所有的空格
+                                    return sql;
+                                },
+                            }
+                            ],
+                            locale: 'zh-CN'
+                        }
+                    );
+                } else {
+                    //初始化查询结果
+                    $("#" + ('query_result')).bootstrapTable('destroy').bootstrapTable({
+                        escape: true,
+                        data: result['rows'],
+                        columns: columns,
+                        showExport: true,
+                        exportDataType: "all",
+                        exportTypes: ['json', 'sql', 'csv', 'txt', 'xml', 'xlsx'],
+                        exportOptions: {
+                            //ignoreColumn: [0],  //忽略某些列的索引数组
+                            fileName: 'export_result'  //文件名称设置
+                        },
+                        undefinedText: 'null',
+                        showColumns: true,
+                        showToggle: true,
+                        clickToSelect: true,
+                        striped: true,
+                        pagination: true,
+                        showRefresh: true,
+                        pageSize: 30,
+                        pageList: [10, 20, 30, 50],
+                        paginationPreText: "上一页",
+                        paginationNextText: "下一页",
+                        search: true,                      //是否显示表格搜索
+                        strictSearch: false,                //是否全匹配搜索
+                        //格式化详情
+                        //detailFormatter: function (index, row) {
+                        //  var html = [];
+                        //  $.each(row, function (key, value) {
+                        //   if (key === 0) {//mongodb这里要修改
+                        //  let rs = value;
+                        //   html.push('<pre>' + highLight(rs) + '</pre>');
+                        // }
+                        //  });
+                        //return html.join('');
+                        //  },
+                        locale: 'zh-CN'
+                    });
+                }
+                //执行时间和脱敏时间赋值
+                {#$("#" + ('time') + n).text(result['query_time'] + ' sec');#}
+                {#$("#" + ('masking_time') + n).text(result['mask_time'] + ' sec');#}
+                //主从延迟赋值，仅在出现延迟时展示，null和0都不展示
+                //if (result['seconds_behind_master']) {
+                //  $("#seconds_behind_master").text('Seconds_Behind_Master:  ' + result['seconds_behind_master']);
+                //}
+            } else {
+                //查询报错失败信息
+                if (active_li_title.match(/^执行结果\d$/)) {
+                    n = active_li_id.split("execute_result_tab")[1];
+                } else {
+                    tab_add();
+                    n = sessionStorage.getItem('tab_num');
+                }
+                $("#" + ('query_result' + n)).bootstrapTable('destroy').bootstrapTable({
+                    escape: false,
+                    columns: [{
+                        field: 'error',
+                        title: 'Error',
+                        formatter: function (value, row, index) {
+                            //staus为2的时候，增加申请链接
+                            if (data.status === 2) {
+                                return value + "<a href=\"/queryapplylist/\">" + "（提交申请）" + "</a>"
+                            } else {
+                                return value
+                            }
+                        }
+                    }],
+                    data: [{
+                        error: data.msg
+                    }]
+                })
+            }
+        }
+
+        //向后端提交查询数据
+        function sqlquery() {
+            var select_sqlContent = editor.session.getTextRange(editor.getSelectionRange());
+            if (select_sqlContent) {
+                sqlContent = select_sqlContent
+            } else {
+                var sqlContent = editor.getValue();
+            }
+            //提交请求
+            $.ajax({
+                type: "post",
+                url: "http://127.0.0.1:8001/factory/query/",
+                dataType: "json",
+                data: JSON.stringify({
+                    instance_name: $("#query_instance").val(),
+                    db_name: $("#query_db").val(),
+                    tb_name: $("#query_tb").val(),
+                    sql_content: sqlContent,
+                    limit_num: $("#limit_num").val()
+                }),
+                //complete: function () {
+                // $('input[type=button]').removeClass('disabled');
+                //$('input[type=button]').prop('disabled', false);
+                //optgroup_control();
+                //},
+                success: function (data) {
+                    console.log(data)
+                    display_data(data)
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    console.log(11111)
+                    alert(errorThrown);
+                }
+            });
+        }
+    </script>
+    <script>
+        var queryParams = function (params) {
+            var param = {
+                pageIndex: Math.ceil(params.offset / params.limit) + 1,
+                pageSize: params.limit,
+                order: params.order,
+                ordername: params.sort,
+                startDateTime: $("#dateSearch .startDate").val(),
+                endDateTime: $("#dateSearch .endDate").val(),
+                search: $("#dateSearch .imuserid").val()
+            };
+            return param;
+        }
+
+        var responseHandler = function (e) {
+            console.log(e);
+            if (e.data && e.data.length > 0) {
+                return {"rows": e.data, "total": e.count};
+            } else {
+                return {"rows": [], "total": 0};
+            }
+
+        }
+        var uidHandle = function (res) {
+            var html = "<a href='#'>" + res + "</a>";
+            return html;
+        }
+        var operateFormatter = function (value, row, index) {//赋予的参数
+            return [
+                '<button class="btn btn-info btn-sm rightSize detailBtn" type="button"><i class="fa fa-paste"></i> 详情</button>',
+                '<button class="btn btn-danger btn-sm rightSize packageBtn" type="button"><i class="fa fa-envelope"></i> 通知</button>'
+            ].join('');
+        }
+        self.dataInit = function (name) {
+            var url, columns, tableName;
+            switch (name) {
+                case 'loginLogTab':
+                    tableName = "loginLog-table";
+                    columns = [
+                        {
+                            checkbox: true
+                        },
+                        {
+                            field: 'uid',
+                            title: '用户编号',
+                            align: 'center',
+                            formatter: uidHandle,//自定义方法设置uid跳转链接
+                            width: 300
+                        }, {
+                            field: 'name',
+                            title: '姓名',
+                            align: 'center',
+                            sortable: false   //本列不可以排序
+                        }, {
+                            field: 'sex',
+                            title: '性别',
+                            align: 'center'
+                        }, {
+                            field: 'age',
+                            title: '年龄',
+                            align: 'center',
+                            sortable: true,
+                            clickToSelect: false,
+                            sortName: "age",
+                            order: "asc"
+                        }, {
+                            field: 'area',
+                            title: '户籍所在地',
+                            align: 'left',
+                            halign: 'center' //设置表头列居中对齐
+                        }, {
+                            field: 'loginWay',
+                            title: '登录方式',
+                            align: 'center'
+                        }, {
+                            field: 'status',
+                            title: '状态',
+                            align: 'center'
+                        }, {
+                            field: 'createTime',
+                            title: '登录时间',
+                            align: 'center',
+                            width: 90
+                        }, {
+                            field: 'orderService',
+                            title: '购买服务',
+                            align: 'center'
+                        }, {
+                            field: 'connectorIP',
+                            title: '连接器IP',
+                            align: 'center'
+                        }, {
+                            field: 'connectorPort',
+                            title: '连接器端口',
+                            align: 'center'
+                        }, {
+                            field: 'operate',
+                            title: '操作',
+                            align: 'center',
+                            valign: 'middle',
+                            formatter: operateFormatter //自定义方法，添加操作按钮
+                        }
+                    ];
+                    break;
+                case 'receiveLogTab':
+                    //省略
+                    break;
+                case 'socketInputTab':
+                    //省略
+                    break;
+                case 'socketOutputTab':
+                    //省略
+                    break;
+            }
+            $('#' + tableName).empty();
+            $('#' + tableName).bootstrapTable('destroy').bootstrapTable({
+                url: '../data/login_info2.json',   //url一般是请求后台的url地址,调用ajax获取数据。此处我用本地的json数据来填充表格。
+                method: "get",                     //使用get请求到服务器获取数据
+                dataType: "json",
+                contentType: 'application/json,charset=utf-8',
+                toolbar: "#toolbar",                //一个jQuery 选择器，指明自定义的toolbar 例如:#toolbar, .toolbar.
+                uniqueId: "id",                    //每一行的唯一标识，一般为主键列
+                height: document.body.clientHeight - 165,   //动态获取高度值，可以使表格自适应页面
+                cache: false,                       // 不缓存
+                striped: true,                      // 隔行加亮
+                queryParamsType: "limit",           //设置为"undefined",可以获取pageNumber，pageSize，searchText，sortName，sortOrder
+                                                    //设置为"limit",符合 RESTFul 格式的参数,可以获取limit, offset, search, sort, order
+                queryParams: queryParams,
+                sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
+                // sortable: true,                     //是否启用排序;意味着整个表格都会排序
+                sortName: 'uid',                    // 设置默认排序为 name
+                sortOrder: "asc",                   //排序方式
+                pagination: true,                   //是否显示分页（*）
+                search: true,                       //是否显示表格搜索，此搜索是客户端搜索，不会进服务端，所以，个人感觉意义不大
+                strictSearch: true,
+                showColumns: true,                  //是否显示所有的列
+                showRefresh: true,                  //是否显示刷新按钮
+                showToggle: true,                    //是否显示详细视图和列表视图
+                clickToSelect: true,                //是否启用点击选中行
+                minimumCountColumns: 2,          //最少允许的列数 clickToSelect: true, //是否启用点击选中行
+                pageNumber: 1,                   //初始化加载第一页，默认第一页
+                pageSize: 10,                    //每页的记录行数（*）
+                pageList: [10, 25, 50, 100],     //可供选择的每页的行数（*）
+                paginationPreText: "Previous",
+                paginationNextText: "Next",
+                paginationFirstText: "First",
+                paginationLastText: "Last",
+                responseHandler: responseHandler,
+                columns: columns,
+                onLoadSuccess: function (data) { //加载成功时执行
+                    console.log(data);
+                },
+                onLoadError: function (res) { //加载失败时执行
+                    console.log(res);
+                }
+            });
+        }
+    </script>
+{% endblock %}
