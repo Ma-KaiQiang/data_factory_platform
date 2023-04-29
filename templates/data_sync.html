@@ -221,11 +221,11 @@
 
         //先做表单验证，验证成功再成功提交查询请求
         var validate = function () {
-            if (sqlquery_validate()) {
+           // if (sqlquery_validate()) {
                 {#$('input[type=button]').addClass('disabled');#}
                 {#$('input[type=button]').prop('disabled', true);#}
                 sqlquery();
-            }
+            //}
         };
     </script>
     <script>
@@ -269,7 +269,7 @@
                     },
                     onLoadError: function (res) { //加载失败时执行
                         console.log(res);
-                    }
+                    },
                     //格式化详情
                     detailFormatter: function (index, row) {
                         var html = [];
@@ -325,7 +325,7 @@
                 url: "http://127.0.0.1:8001/factory/query/",
                 dataType: "json",
                 data: JSON.stringify({
-                    instance_name: 'pubic-mabang', //$("#query_instance").val(),
+                    instance_name: 'public-mabang', //$("#query_instance").val(),
                     db_name: 'mabang',//$("#query_db").val(),
                     tb_name: 'DB_Shop',//$("#query_tb").val(),
                     sql_content: 'select * from DB_Shop;',//sqlContent,

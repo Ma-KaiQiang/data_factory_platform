@@ -52,6 +52,7 @@ class OnlineDataSync():
             'limit_num': condition.get('limit_num'),
         }
         res = requests.post(url='https://wos.mabangerp.com/query/', data=data, headers=headers())
+        print(res.text)
         return res.json()
 
     @staticmethod
