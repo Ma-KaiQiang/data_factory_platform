@@ -80,28 +80,33 @@
     </form>
     <div class="row">
         <div class="col-lg-12">
-            {#            <div class="card m-b-20">#}
-            {#                <div class="card-body">#}
-            <ul class="nav nav-tabs" role="tablist">
-                <li class="active">
-                    <a role="tab">查询结果</a>
-                </li>
-            </ul>
-            <div id="tb_content" class="tab-content">
-                <div id="resultTab" class="tab-pane active">
-                    <div class="table-responsive">
-                        <table id="query_result"></table>
+            <div class="card m-b-20">
+                <div class="card-body">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active">
+                            <h4 class="mt-0 header-title" style="font-weight:bold">查询结果</h4>
+                        </li>
+                    </ul>
+                    <div id="tb_content" class="tab-content">
+                        <div id="toolbar" class="btn-group" style="display: block">
+                            <button id="btn_add" type="button" class="btn btn-info btn-sm rightSize">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>选中同步
+                            </button>
+
+                        </div>
+                        <div id="resultTab" class="tab-pane active">
+                            <div class="table-responsive">
+                                <table id="query_result" style="border: 1px"></table>
+                            </div>
+                        </div>
+
                     </div>
 
 
                 </div>
-
             </div>
-
-
         </div>
     </div>
-    {#        </div>#}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-language_tools.js"
             type="text/javascript"></script>
@@ -221,10 +226,10 @@
 
         //先做表单验证，验证成功再成功提交查询请求
         var validate = function () {
-           // if (sqlquery_validate()) {
-                {#$('input[type=button]').addClass('disabled');#}
-                {#$('input[type=button]').prop('disabled', true);#}
-                sqlquery();
+            // if (sqlquery_validate()) {
+            {#$('input[type=button]').addClass('disabled');#}
+            {#$('input[type=button]').prop('disabled', true);#}
+            sqlquery();
             //}
         };
     </script>
@@ -235,36 +240,38 @@
             if (result['column_list']) {
                 //异步获取要动态生成的列
                 var columns = [{
-                    checkbox: true
+                    field: '全选',
+                    checkbox: true,
                 }];
                 $.each(result['column_list'], function (i, column) {
                     columns.push({
-                        "field": i,
-                        "title": column,
-                        align: 'center',
-                        "sortable": true,
+                        field: i,
+                        title: column,
+                        align: 'left',
                     });
-                });
+                })
                 //初始化查询结果
                 $("#" + ('query_result')).bootstrapTable('destroy').bootstrapTable({
-                    escape: true,
                     data: result['rows'],
                     columns: columns,
+                    uniqueId: "id",                    //每一行的唯一标识，一般为主键列
                     undefinedText: 'null',
                     showColumns: true,   //是否显示所有的列
                     showToggle: true,
                     clickToSelect: true,
                     striped: true,
+                    toolbar: '#toolbar',
+                    total: result.total,
                     pagination: true,
-                    showRefresh: true, //是否显示刷新按钮
                     pageSize: 30,//每页的记录行数（*）
                     pageList: [10, 20, 30, 50], //可供选择的每页的行数（*）
                     paginationPreText: "上一页",
-
                     paginationNextText: "下一页",
                     search: true,                      //是否显示表格搜索
                     strictSearch: false,                //是否全匹配搜索
                     onLoadSuccess: function (data) { //加载成功时执行
+                        tool = document.getElementById("#toolbar")
+                        tool.style.display = 'block'
                         console.log(data);
                     },
                     onLoadError: function (res) { //加载失败时执行
@@ -283,31 +290,6 @@
                     locale: 'zh-CN'
                 });
 
-                //查询报错失败信息
-                if (active_li_title.match(/^执行结果\d$/)) {
-                    n = active_li_id.split("execute_result_tab")[1];
-                } else {
-                    tab_add();
-                    n = sessionStorage.getItem('tab_num');
-                }
-                $("#" + ('query_result' + n)).bootstrapTable('destroy').bootstrapTable({
-                    escape: false,
-                    columns: [{
-                        field: 'error',
-                        title: 'Error',
-                        formatter: function (value, row, index) {
-                            //staus为2的时候，增加申请链接
-                            if (data.status === 2) {
-                                return value + "<a href=\"/queryapplylist/\">" + "（提交申请）" + "</a>"
-                            } else {
-                                return value
-                            }
-                        }
-                    }],
-                    data: [{
-                        error: data.msg
-                    }]
-                })
             }
         }
 

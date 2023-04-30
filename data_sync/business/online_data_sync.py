@@ -38,7 +38,7 @@ class OnlineDataSync():
         return databases
 
     @staticmethod
-    def query(condition: dict) -> dict:
+    def query(condition: dict) -> dict | bool:
         '''
         线上数据库数据查询业务
         :param condition: 查询条件
@@ -52,8 +52,17 @@ class OnlineDataSync():
             'limit_num': condition.get('limit_num'),
         }
         res = requests.post(url='https://wos.mabangerp.com/query/', data=data, headers=headers())
-        print(res.text)
-        return res.json()
+        if res.status_code == 200:
+            res_data = res.json()
+            data = res_data.get('data')
+            if data:
+                total = len(data.get('rows'))
+                res_data['data']['total'] = total
+                return res_data
+            else:
+                return False
+        else:
+            return False
 
     @staticmethod
     def data_assemble(data: dict) -> dict:
@@ -87,7 +96,7 @@ class OnlineDataSync():
         return ids
 
     def main(self):
-        #订单
+        # 订单
         data = self.query({"instance": 'public-order-fahuo', "database": "mabang_order", "table": "Db_OrderType22",
                            "content": "select * from mabang_order.Db_OrderType22 where orderId in (41706860,41695842,41706858,41706859,41708314)"})
         # data = self.query({"instance": 'public-order-fahuo', "database": "mabang_order", "table": "Db_OrderType5",
@@ -95,11 +104,12 @@ class OnlineDataSync():
         ctx = self.data_assemble(data)
         print(ctx)
         condition = {"host": "192.168.2.43", "port": 3306, "user": "mabang", "password": "mabang123",
-                     "database": "mabang_order","table":'Db_OrderType22'}
-        id=self.intranet_data_storage(data=ctx, condition=condition)
+                     "database": "mabang_order", "table": 'Db_OrderType22'}
+        id = self.intranet_data_storage(data=ctx, condition=condition)
         return id
+
 
 if __name__ == '__main__':
     on = OnlineDataSync()
-    id=on.main()
+    id = on.main()
     print(id)

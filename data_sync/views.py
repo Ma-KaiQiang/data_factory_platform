@@ -93,7 +93,6 @@ def query(request):
             "sql_content": sql_content,
             "limit_num": limit_num
         })
-        print(data)
         if data.get('status') == 1:
             return JsonResponse(data)
         # query_data = on.data_assemble(data)
