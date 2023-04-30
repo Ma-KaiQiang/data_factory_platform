@@ -7,6 +7,67 @@
             width: 100%;
             height: 350px;
         }
+        .tab .nav-tabs {
+            border-bottom: 0 none;
+            background: #eaeaea;
+        }
+
+        .tab .nav-tabs li a {
+            background: transparent;
+            border-radius: 0;
+            font-size: 16px;
+            border: none;
+            color: #333;
+            padding: 12px 22px;
+        }
+
+        .tab .nav-tabs li.active a, .tab .nav-tabs li.active a i {
+            border: 0 none;
+            background: #e67e22;
+            color: #fff;
+        }
+
+        .tab .nav-tabs li.active a:after {
+            content: "";
+            position: absolute;
+            left: 45%;
+            bottom: -14px;
+            border: 7px solid transparent;
+            border-top: 7px solid #e67e22;
+        }
+
+        .tab .tab-content {
+            padding: 5px;
+            color: #5a5c5d;
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 5px;
+            border-bottom: 1px solid #e67e22;
+        }
+
+        @media only screen and (max-width: 480px) {
+            .tab .nav-tabs, .tab .nav-tabs li {
+                width: 100%;
+                background: transparent;
+            }
+
+            .tab .nav-tabs li.active a {
+                border-radius: 10px 10px 0 0;
+            }
+
+            .tab .nav-tabs li:first-child a {
+                border-bottom-left-radius: 0;
+            }
+
+            .tab .nav-tabs li a {
+                margin-bottom: 10px;
+                border: 1px solid lightgray;
+            }
+
+            .tab .nav-tabs li.active a:after {
+                border: none;
+            }
+        }
     </style>
 
     <form class="form-horizontal">
@@ -89,9 +150,75 @@
                     </ul>
                     <div id="tb_content" class="tab-content">
                         <div id="toolbar" class="btn-group" style="display: block">
-                            <button id="btn_add" type="button" class="btn btn-info btn-sm rightSize">
+                            <button id="btn_add" type="button" data-toggle="modal" data-target="#datasync"
+                                    class="btn btn-info btn-sm rightSize">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>选中同步
                             </button>
+
+                            <div id="datasync" class="modal fade" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered ">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title mt-0" id="modalHeader">数据同步配置</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                ×
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form-horizontal" method="post" action="/factory/intranet/add/">
+                                                <div class="tab" role="tabpanel">
+                                                    <!-- Nav tabs -->
+                                                    <ul class="nav nav-tabs" role="tablist" style="margin-top:0px;"
+                                                        id="docTabs">
+                                                        <li role="presentation" class="active"><a href="#Section_new"
+                                                                                                  aria-controls="home"
+                                                                                                  role="tab"
+                                                                                                  data-toggle="tab">
+                                                            最新</a>
+                                                        <li role="presentation"><a href="#Section_week"
+                                                                                   aria-controls="profile" role="tab"
+                                                                                   data-toggle="tab">7天热门</a>
+                                                        <li role="presentation"><a href="#Section_month"
+                                                                                   aria-controls="messages" role="tab"
+                                                                                   data-toggle="tab">30天热门</a>
+                                                    </ul>
+                                                    <!-- Tab panes -->
+                                                    <div class="tab-content">
+                                                        <div role="tabpanel" class="tab-pane fade in active"
+                                                             id="Section_new">
+                                                            <p>
+                                                                tab1中的内容
+                                                            </p>
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane fade" id="Section_week">
+                                                            <p>
+                                                                tab2中的内容
+                                                            </p>
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane fade" id="Section_month">
+                                                            <p>
+                                                                tab3中的内容
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit"
+                                                            class="btn btn-primary waves-effect waves-light">同步
+                                                    </button>
+                                                    <button type="button" class="btn btn-danger waves-effect"
+                                                            data-dismiss="modal">
+                                                        取消同步
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div><!-- /.modal -->
 
                         </div>
                         <div id="resultTab" class="tab-pane active">
