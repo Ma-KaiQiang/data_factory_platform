@@ -7,6 +7,7 @@
             width: 100%;
             height: 350px;
         }
+
         .tab .nav-tabs {
             border-bottom: 0 none;
             background: #eaeaea;
@@ -18,12 +19,12 @@
             font-size: 16px;
             border: none;
             color: #333;
-            padding: 12px 22px;
+            padding: 7px 15px;
         }
 
         .tab .nav-tabs li.active a, .tab .nav-tabs li.active a i {
             border: 0 none;
-            background: #e67e22;
+            background: #586676;
             color: #fff;
         }
 
@@ -33,16 +34,16 @@
             left: 45%;
             bottom: -14px;
             border: 7px solid transparent;
-            border-top: 7px solid #e67e22;
+            border-top: 7px solid #0d2fd7;
         }
 
         .tab .tab-content {
-            padding: 5px;
+            padding: 3px;
             color: #5a5c5d;
-            font-size: 14px;
-            line-height: 20px;
-            margin-top: 5px;
-            border-bottom: 1px solid #e67e22;
+            font-size: 10px;
+            line-height: 15px;
+            margin-top: 3px;
+            border-bottom: 2px solid #1f232c;
         }
 
         @media only screen and (max-width: 480px) {
@@ -52,7 +53,7 @@
             }
 
             .tab .nav-tabs li.active a {
-                border-radius: 10px 10px 0 0;
+                border-radius: 5px 5px 0 0;
             }
 
             .tab .nav-tabs li:first-child a {
@@ -93,22 +94,22 @@
                         <hr style="filter: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color="#6f5499"
                             size="10"/>
                         <div class="form-group">
-                            <select id="query_instance" name="instance_name" onchange="initDatabase()"
-                                    class="selectpicker form-control border"
-                                    data-live-search="true" data-live-search-placeholder="搜索您所在组的实例"
-                                    title="请选择实例:" data-placeholder="请选择实例:" tabindex=“-98”>
-                                <optgroup id="instance" label="MySQL">
-                                </optgroup>
-                            </select>
+                                <select id="query_instance" name="instance_name" onchange="initDatabase()"
+                                        class="selectpicker form-control border"
+                                        data-live-search="true" data-live-search-placeholder="搜索您所在组的实例"
+                                        title="请选择实例:" data-placeholder="请选择实例:">
+                                    <optgroup id="instance" label="MySQL">
+                                    </optgroup>
+                                </select>
                         </div>
                         <div class="form-group">
-                            <select id="query_db" name="db_name" onchange="initTable()"
-                                    class="selectpicker form-control border"
-                                    data-live-search="true" data-live-search-placeholder="搜索您要查询的数据库"
-                                    title="请选择数据库:" data-placeholder="请选择数据库:">
-                                <optgroup id="database" label="数据库">
-                                </optgroup>
-                            </select>
+                                <select id="query_db" name="db_name" onchange="initTable()"
+                                        class="selectpicker form-control border"
+                                        data-live-search="true" data-live-search-placeholder="搜索您要查询的数据库"
+                                        title="请选择数据库:" data-placeholder="请选择数据库:">
+                                    <optgroup id="database" label="数据库">
+                                    </optgroup>
+                                </select>
                         </div>
                         <div class="form-group">
                             <select id="query_tb" name="table_name" class="selectpicker form-control border"
@@ -120,12 +121,13 @@
                             </select>
                         </div>
                         <div class="form-group">
+
                             <select id="limit_num" name="limit_num" class="selectpicker form-control border"
                                     title="返回行数" data-placeholder="请选择返回行数:">
                                 <optgroup id="limit" label="返回行数">
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
                                     <option value="100">100</option>
-                                    <option value="200">200</option>
-                                    <option value="500">500</option>
                                 </optgroup>
                             </select>
                         </div>
@@ -168,21 +170,21 @@
                                         </div>
                                         <div class="modal-body">
                                             <form class="form-horizontal" method="post" action="/factory/intranet/add/">
-                                                <div class="tab" role="tabpanel">
+                                                <div class="tab" role="tabpanel" style="height:600px;">
                                                     <!-- Nav tabs -->
-                                                    <ul class="nav nav-tabs" role="tablist" style="margin-top:0px;"
+                                                    <ul class="nav nav-tabs" role="tablist" style="margin-top:2px;"
                                                         id="docTabs">
                                                         <li role="presentation" class="active"><a href="#Section_new"
                                                                                                   aria-controls="home"
                                                                                                   role="tab"
-                                                                                                  data-toggle="tab">
-                                                            最新</a>
-                                                        <li role="presentation"><a href="#Section_week"
-                                                                                   aria-controls="profile" role="tab"
-                                                                                   data-toggle="tab">7天热门</a>
+                                                                                                  data-toggle="tab">同步字段</a>
+                                                        <li role="presentation" class="active"><a href="#Section_week"
+                                                                                                  aria-controls="profile"
+                                                                                                  role="tab"
+                                                                                                  data-toggle="tab">同步库表</a>
                                                         <li role="presentation"><a href="#Section_month"
                                                                                    aria-controls="messages" role="tab"
-                                                                                   data-toggle="tab">30天热门</a>
+                                                                                   data-toggle="tab">数据过期时间</a>
                                                     </ul>
                                                     <!-- Tab panes -->
                                                     <div class="tab-content">
@@ -193,9 +195,46 @@
                                                             </p>
                                                         </div>
                                                         <div role="tabpanel" class="tab-pane fade" id="Section_week">
-                                                            <p>
-                                                                tab2中的内容
-                                                            </p>
+                                                            <h4 class="mt-0 header-title" style="font-weight:bold">
+                                                                查询条件</h4>
+                                                            <hr style="filter: alpha(opacity=100,finishopacity=0,style=3)"
+                                                                width="100%" color="#6f5499"
+                                                                size="10"/>
+                                                            <div class="form-group">
+                                                                <select id="query_instance" name="instance_name"
+                                                                        onchange=""
+                                                                        class="selectpicker form-control border"
+                                                                        data-live-search="true"
+                                                                        data-live-search-placeholder="搜索您所在组的实例"
+                                                                        title="请选择实例:"
+                                                                        data-placeholder="请选择实例:" tabindex="-98">
+                                                                    <optgroup id="instance" label="MySQL">
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <select id="query_db" name="db_name"
+                                                                        onchange="initDatabase()"
+                                                                        class="selectpicker form-control border"
+                                                                        data-live-search="true"
+                                                                        data-live-search-placeholder="搜索您要查询的数据库"
+                                                                        title="请选择数据库:"
+                                                                        data-placeholder="请选择数据库:">
+                                                                    <optgroup id="database" label="数据库">
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <select id="query_tb" name="table_name"
+                                                                        class="selectpicker form-control border"
+                                                                        data-live-search="true"
+                                                                        data-live-search-placeholder="搜索您要查询的表"
+                                                                        title="查询表数据"
+                                                                        data-placeholder="查看表数据">
+                                                                    <optgroup id="table" label="数据表">
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
                                                         </div>
                                                         <div role="tabpanel" class="tab-pane fade" id="Section_month">
                                                             <p>
@@ -258,9 +297,10 @@
     </script>
     <!-- 查询条件 -->
     <script>
+
         window.onload = function () {
             // 动态加载省份选项数据
-            initSelectOptions("instance", "query_instance");
+            initSelectOptions("instance1", "query_instance");
         };// onReady
         function removeAll(ele) {
             //根据id查找对象，
@@ -292,10 +332,10 @@
                         selectObj.find().remove();
                         for (var i in configs) {
                             var optionValue = configs[i];
-                            console.log(optionValue)
                             selectObj.append(new Option(optionValue, optionValue));
                         }
                         // 刷新select
+                        optgroupObj.selectpicker('render');
                         optgroupObj.selectpicker('refresh');
                     } else {
                         console.log('获取[' + parentId + ']信息失败，原因：' + result.errorMessage);
