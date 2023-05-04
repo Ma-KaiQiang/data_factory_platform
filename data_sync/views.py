@@ -42,6 +42,17 @@ def online_data_sync(request):
         return render(request, "data_sync.html")
 
 
+@csrf_exempt
+def get_intranet_db(request):
+    instance_name = request.GET.get("instance")
+    db_name = request.GET.get("database")
+    if not instance_name:
+        fields = ["id", "name", "host", "port", "user", "password", "remark"]
+        data_l = list(DataFactoryIntranetConfig.objects.values_list(*fields))
+        data = [dict(zip(fields, l)) for l in data_l]
+        return JsonResponse(data)
+
+
 def get_instance(request):
     if request.method == "GET":
         online = OnlineDataSync()
