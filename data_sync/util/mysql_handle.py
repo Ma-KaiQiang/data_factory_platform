@@ -13,10 +13,22 @@ logger = logging.getLogger('console')
 
 class PyMysqlBase:
 
-    def __init__(self, host: str, port: int, usr: str, pwd: str, database: str):
+    def __init__(self, host: str, port: int, usr: str, pwd: str, database=None):
         self.conn = pymysql.connect(host=host, port=port, user=usr, password=pwd
                                     , database=database)
+
         self.cursor = self.conn.cursor()
+
+    def get_database(self):
+        self.cursor.execute('SHOW DATABASES;')
+        data_bases = self.cursor.fetchall()
+        return data_bases
+
+    def get_tables(self):
+        self.cursor.execute('SHOW TABLES;')
+        tables = self.cursor.fetchall()
+        print(tables)
+        return tables
 
     def cmd(self, sql):
         self.cursor.execute(sql)
@@ -31,7 +43,6 @@ class PyMysqlBase:
         '''
         try:
             sql = f'insert into {table} ({fields}) values {tuple(values)}'.replace('None', 'null')
-            print(sql)
             self.cursor.execute(sql)
             id = self.conn.insert_id()
             self.conn.commit()
@@ -120,4 +131,9 @@ class PyMysqlBase:
 
 
 if __name__ == '__main__':
-    pass
+    host = '192.168.2.43'
+    user = 'mabang'
+    password = 'mabang123'
+    port = 3306
+    with PyMysqlBase(host=host, usr=user, pwd=password, port=port, database='mabang') as p:
+        p.get_tables()

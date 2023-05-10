@@ -1041,7 +1041,7 @@
 2023-04-30 22:55:56,452 [django.server:187] [basehttp:log_message] [WARNING] "GET /static/css/bootstrap.css.map HTTP/1.1" 404 1822
 2023-04-30 22:55:56,598 [django.server:187] [basehttp:log_message] [WARNING] "GET /static/js/bootstrap-select.min.js.map HTTP/1.1" 404 1849
 2023-04-30 22:55:56,838 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_instance/?instance=null&database=null HTTP/1.1" 200 1532
-2023-04-30 22:58:55,308 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\urls.py changed, reloading.
+2023-04-30 22:58:55,308 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\锟斤拷目\data_factory_platform\data_sync\urls.py changed, reloading.
 2023-04-30 22:58:56,166 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
 2023-04-30 22:59:03,300 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/test/ HTTP/1.1" 200 783
 2023-04-30 22:59:03,325 [django.server:187] [basehttp:log_message] [INFO] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
@@ -1159,7 +1159,7 @@
 2023-04-30 23:14:39,616 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/users/avatar-1.jpg HTTP/1.1" 404 4273
 2023-04-30 23:14:39,622 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/logo-sm.png HTTP/1.1" 404 4252
 2023-04-30 23:14:39,774 [django.server:187] [basehttp:log_message] [WARNING] "GET /static/js/bootstrap-select.min.js.map HTTP/1.1" 404 1849
-2023-04-30 23:15:29,527 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\项目\data_factory_platform\data_sync\urls.py changed, reloading.
+2023-04-30 23:15:29,527 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] D:\锟斤拷目\data_factory_platform\data_sync\urls.py changed, reloading.
 2023-04-30 23:15:30,501 [django.utils.autoreload:677] [autoreload:run_with_reloader] [INFO] Watching for file changes with StatReloader
 2023-04-30 23:15:36,482 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/index/ HTTP/1.1" 200 13387
 2023-04-30 23:15:36,535 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/logo-sm.png HTTP/1.1" 404 4078
@@ -1223,3 +1223,84 @@
 2023-04-30 23:39:04,893 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/logo-sm.png HTTP/1.1" 404 4078
 2023-04-30 23:39:05,803 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_instance/?instance=null&database=null HTTP/1.1" 200 1532
 2023-04-30 23:39:19,356 [django.server:187] [basehttp:log_message] [INFO] "POST /factory/query/ HTTP/1.1" 200 50470
+2023-05-02 19:13:11,151 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/data_sync/ HTTP/1.1" 200 37727
+2023-05-02 19:13:11,171 [django.server:187] [basehttp:log_message] [INFO] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+2023-05-02 19:13:11,171 [django.server:187] [basehttp:log_message] [INFO] "GET /static/css/bootstrap-table.min.css HTTP/1.1" 304 0
+2023-05-02 19:13:11,185 [django.server:187] [basehttp:log_message] [INFO] "GET /static/js/bootstrap-select.min.js HTTP/1.1" 304 0
+2023-05-02 19:13:11,196 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/logo-sm.png HTTP/1.1" 404 4078
+2023-05-02 19:13:11,197 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/users/avatar-1.jpg HTTP/1.1" 404 4099
+2023-05-02 19:13:11,223 [django.server:187] [basehttp:log_message] [INFO] "GET /static/js/jquery.min.js HTTP/1.1" 200 137835
+2023-05-02 19:13:11,664 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_instance/?instance=null&database=null HTTP/1.1" 200 1532
+2023-05-02 19:13:23,513 [django.server:187] [basehttp:log_message] [WARNING] "GET /static/js/bootstrap-select.min.js.map HTTP/1.1" 404 1849
+2023-05-02 19:14:03,779 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/data_sync/ HTTP/1.1" 200 37726
+2023-05-02 19:14:03,811 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/users/avatar-1.jpg HTTP/1.1" 404 4099
+2023-05-02 19:14:03,812 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/logo-sm.png HTTP/1.1" 404 4078
+2023-05-02 19:14:04,190 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_instance/?instance=null&database=null HTTP/1.1" 200 1532
+2023-05-02 19:14:12,749 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_db/?instance=public-mabang&database=null HTTP/1.1" 200 212
+2023-05-02 19:14:15,153 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_tb/?instance=public-mabang&database=mabang HTTP/1.1" 200 4203
+2023-05-02 19:14:32,263 [django.server:187] [basehttp:log_message] [ERROR] "POST /factory/query/ HTTP/1.1" 500 76287
+2023-05-02 19:14:42,228 [django.server:187] [basehttp:log_message] [WARNING] "GET /static/js/bootstrap-select.min.js.map HTTP/1.1" 404 1849
+2023-05-02 19:14:47,629 [django.server:187] [basehttp:log_message] [ERROR] "POST /factory/query/ HTTP/1.1" 500 76287
+2023-05-02 19:15:13,104 [django.server:187] [basehttp:log_message] [ERROR] "POST /factory/query/ HTTP/1.1" 500 76209
+2023-05-02 19:15:23,068 [django.server:187] [basehttp:log_message] [INFO] "POST /factory/query/ HTTP/1.1" 200 4006
+2023-05-04 09:44:23,653 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/data_sync/ HTTP/1.1" 200 36141
+2023-05-04 09:44:23,665 [django.server:187] [basehttp:log_message] [INFO] "GET /static/css/bootstrap-table.min.css HTTP/1.1" 304 0
+2023-05-04 09:44:23,666 [django.server:187] [basehttp:log_message] [INFO] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+2023-05-04 09:44:23,678 [django.server:187] [basehttp:log_message] [INFO] "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2023-05-04 09:44:23,682 [django.server:187] [basehttp:log_message] [INFO] "GET /static/js/bootstrap-select.min.js HTTP/1.1" 304 0
+2023-05-04 09:44:23,694 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/logo-sm.png HTTP/1.1" 404 4078
+2023-05-04 09:44:23,696 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/users/avatar-1.jpg HTTP/1.1" 404 4099
+2023-05-04 09:44:25,255 [django.server:187] [basehttp:log_message] [ERROR] "GET /factory/sync/query_instance/?instance=null&database=null HTTP/1.1" 500 115249
+2023-05-04 09:44:42,605 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/data_sync/ HTTP/1.1" 200 36141
+2023-05-04 09:44:42,630 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/users/avatar-1.jpg HTTP/1.1" 404 4099
+2023-05-04 09:44:42,631 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/logo-sm.png HTTP/1.1" 404 4078
+2023-05-04 09:44:42,936 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_instance/?instance=null&database=null HTTP/1.1" 200 1532
+2023-05-04 09:44:55,490 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_db/?instance=nei-mysql-2.224&database=null HTTP/1.1" 200 2970
+2023-05-04 09:44:57,463 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_db/?instance=public-mabang&database=null HTTP/1.1" 200 212
+2023-05-04 09:45:01,064 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_tb/?instance=public-mabang&database=mabang HTTP/1.1" 200 4203
+2023-05-04 09:45:08,346 [django.server:187] [basehttp:log_message] [ERROR] "POST /factory/query/ HTTP/1.1" 500 76221
+2023-05-04 09:45:20,789 [django.server:187] [basehttp:log_message] [INFO] "POST /factory/query/ HTTP/1.1" 200 22106
+2023-05-04 09:46:14,566 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/data_sync/ HTTP/1.1" 200 37726
+2023-05-04 09:46:14,613 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/users/avatar-1.jpg HTTP/1.1" 404 4099
+2023-05-04 09:46:14,613 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/logo-sm.png HTTP/1.1" 404 4078
+2023-05-04 09:46:14,952 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_instance/?instance=null&database=null HTTP/1.1" 200 1532
+2023-05-04 13:53:19,992 [django.server:187] [basehttp:log_message] [INFO] "GET /static/css/style.css HTTP/1.1" 200 83156
+2023-05-04 13:53:21,964 [django.server:187] [basehttp:log_message] [INFO] "GET /static/images/bg.jpg HTTP/1.1" 200 184817
+2023-05-04 13:59:32,935 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/index/ HTTP/1.1" 200 13391
+2023-05-04 13:59:33,046 [django.server:187] [basehttp:log_message] [INFO] "GET /static/css/style.css HTTP/1.1" 200 83156
+2023-05-04 13:59:33,055 [django.server:187] [basehttp:log_message] [INFO] "GET /static/plugins/fullcalendar/css/fullcalendar.min.css HTTP/1.1" 200 13709
+2023-05-04 13:59:33,060 [django.server:187] [basehttp:log_message] [INFO] "GET /static/css/bootstrap-table.min.css HTTP/1.1" 200 10234
+2023-05-04 13:59:33,061 [django.server:187] [basehttp:log_message] [INFO] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 212514
+2023-05-04 13:59:33,063 [django.server:187] [basehttp:log_message] [INFO] "GET /static/css/icons.css HTTP/1.1" 200 253084
+2023-05-04 13:59:33,083 [django.server:187] [basehttp:log_message] [INFO] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2447
+2023-05-04 13:59:33,089 [django.server:187] [basehttp:log_message] [INFO] "GET /static/js/bootstrap-select.min.js HTTP/1.1" 200 76119
+2023-05-04 13:59:33,089 [django.server:187] [basehttp:log_message] [INFO] "GET /static/js/modernizr.min.js HTTP/1.1" 200 11084
+2023-05-04 13:59:33,097 [django.server:187] [basehttp:log_message] [INFO] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 62569
+2023-05-04 13:59:33,101 [django.server:187] [basehttp:log_message] [INFO] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 119939
+2023-05-04 13:59:33,104 [django.server:187] [basehttp:log_message] [INFO] "GET /static/js/jquery.slimscroll.js HTTP/1.1" 200 13832
+2023-05-04 13:59:33,116 [django.server:187] [basehttp:log_message] [INFO] "GET /static/js/jquery.min.js HTTP/1.1" 200 137835
+2023-05-04 13:59:33,122 [django.server:187] [basehttp:log_message] [INFO] "GET /static/pages/calendar-init.js HTTP/1.1" 200 5502
+2023-05-04 13:59:33,122 [django.server:187] [basehttp:log_message] [INFO] "GET /static/js/waves.js HTTP/1.1" 200 69263
+2023-05-04 13:59:33,132 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/logo-sm.png HTTP/1.1" 404 4078
+2023-05-04 13:59:33,140 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/users/avatar-1.jpg HTTP/1.1" 404 4099
+2023-05-04 13:59:33,140 [django.server:187] [basehttp:log_message] [INFO] "GET /static/plugins/moment/moment.js HTTP/1.1" 200 150941
+2023-05-04 13:59:33,143 [django.server:187] [basehttp:log_message] [INFO] "GET /static/js/app.js HTTP/1.1" 200 6452
+2023-05-04 13:59:33,154 [django.server:187] [basehttp:log_message] [INFO] "GET /static/plugins/fullcalendar/js/fullcalendar.min.js HTTP/1.1" 200 118884
+2023-05-04 13:59:33,173 [django.server:187] [basehttp:log_message] [INFO] "GET /static/plugins/jquery-ui/jquery-ui.min.js HTTP/1.1" 200 253668
+2023-05-04 13:59:33,879 [django.server:187] [basehttp:log_message] [INFO] "GET /static/fonts/ionicons.ttf?v=1.5.0 HTTP/1.1" 200 164548
+2023-05-04 13:59:33,882 [django.server:187] [basehttp:log_message] [INFO] "GET /static/fonts/materialdesignicons-webfont.woff2?v=1.6.50 HTTP/1.1" 200 90140
+2023-05-04 13:59:34,700 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/favicon.ico HTTP/1.1" 404 4078
+2023-05-04 13:59:48,954 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/data_sync/ HTTP/1.1" 200 37729
+2023-05-04 13:59:48,985 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/logo-sm.png HTTP/1.1" 404 4078
+2023-05-04 13:59:48,986 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/users/avatar-1.jpg HTTP/1.1" 404 4099
+2023-05-04 13:59:51,142 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_instance/?instance=null&database=null HTTP/1.1" 200 1532
+2023-05-04 14:00:00,564 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_db/?instance=public-mabang&database=null HTTP/1.1" 200 212
+2023-05-04 14:00:03,254 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_tb/?instance=public-mabang&database=mabang HTTP/1.1" 200 4203
+2023-05-04 14:00:23,140 [django.server:187] [basehttp:log_message] [ERROR] "POST /factory/query/ HTTP/1.1" 500 76221
+2023-05-04 14:00:37,523 [django.server:187] [basehttp:log_message] [INFO] "POST /factory/query/ HTTP/1.1" 200 22106
+2023-05-04 14:00:37,680 [django.server:187] [basehttp:log_message] [INFO] "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+2023-05-04 14:05:13,811 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/data_sync/ HTTP/1.1" 200 37799
+2023-05-04 14:05:13,849 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/logo-sm.png HTTP/1.1" 404 4078
+2023-05-04 14:05:13,850 [django.server:187] [basehttp:log_message] [WARNING] "GET /factory/static/images/users/avatar-1.jpg HTTP/1.1" 404 4099
+2023-05-04 14:05:15,130 [django.server:187] [basehttp:log_message] [INFO] "GET /factory/sync/query_instance/?instance=null&database=null HTTP/1.1" 200 1532
+2023-05-04 14:25:18,885 [django.utils.autoreload:266] [autoreload:trigger_reload] [INFO] C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\packages\__init__.py changed, reloading.

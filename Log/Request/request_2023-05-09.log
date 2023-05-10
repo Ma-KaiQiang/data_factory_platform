@@ -1,0 +1,170 @@
+2023-05-09 13:49:19,929 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 13:49:19,930 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 13:49:21,966 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/favicon.ico
+2023-05-09 13:49:25,809 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 13:49:25,811 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 13:49:39,718 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/intranet/data/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view data_sync.views.get_intranet_db didn't return an HttpResponse object. It returned None instead.
+2023-05-09 13:52:51,459 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 13:52:51,461 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 13:53:53,783 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/intranet/data/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 56, in get_intranet_db
+    return JsonResponse(data)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\response.py", line 684, in __init__
+    raise TypeError(
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+2023-05-09 13:59:06,409 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 13:59:06,427 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 15:55:11,906 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 15:55:11,970 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 15:59:26,884 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 15:59:26,887 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 16:00:28,681 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 16:00:28,685 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 16:01:22,845 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 16:01:22,849 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 16:26:54,329 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 16:26:54,331 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 16:27:42,425 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 16:27:42,426 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 16:28:13,581 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 16:28:13,582 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 16:28:40,661 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 16:28:40,663 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 16:35:35,707 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 16:35:35,708 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 16:35:59,891 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 16:35:59,936 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 16:37:06,933 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 16:37:06,935 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 16:37:48,131 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 16:37:48,134 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 16:38:02,376 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 16:38:02,377 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 16:38:43,576 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 16:38:43,577 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 16:54:23,689 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 16:54:23,690 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 17:00:07,737 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 17:00:07,739 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 17:01:40,653 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 17:01:40,654 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 17:02:34,506 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 17:02:34,508 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 17:03:16,931 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 17:03:16,933 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 17:04:05,869 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 17:04:05,871 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 18:14:10,454 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 18:14:10,459 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 18:14:11,948 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/favicon.ico
+2023-05-09 18:14:55,534 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 18:14:55,536 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 18:14:56,154 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/favicon.ico
+2023-05-09 21:11:18,674 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:11:18,675 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:11:20,379 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/favicon.ico
+2023-05-09 21:11:23,153 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:11:23,154 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:22:58,790 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:22:58,803 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:34:59,385 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:34:59,386 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:37:19,590 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:37:19,592 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:37:31,639 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:37:31,641 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:37:39,863 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:37:39,864 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:38:12,131 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:38:12,133 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:39:54,252 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:39:54,256 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:40:27,324 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:40:27,325 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:44:08,530 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:44:08,531 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:44:49,021 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:44:49,024 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:45:38,262 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:45:38,264 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:46:13,123 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:46:13,123 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:55:50,790 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:55:50,804 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:58:49,668 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:58:49,669 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-09 21:59:05,933 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-09 21:59:05,936 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-10 09:45:39,469 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-10 09:45:39,475 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-10 09:45:45,817 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-10 09:45:45,818 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-10 09:45:46,432 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/sync/query_instance/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\views.py", line 66, in get_instance
+    data_ = online.query_instance()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 20, in query_instance
+    mysql_l = jsonpath(res.json(), '$..data[?(@.db_type=="mysql")].instance_name')
+                       ^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-05-10 09:46:05,056 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-10 09:46:05,057 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-10 09:51:57,857 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/logo-sm.png
+2023-05-10 09:51:57,859 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/users/avatar-1.jpg
+2023-05-10 09:51:58,119 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/intranet/static/images/favicon.ico
+2023-05-10 09:55:47,651 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-10 09:55:47,659 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-10 10:04:38,147 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-10 10:04:38,163 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-10 10:13:16,481 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-10 10:13:16,483 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-10 10:14:36,670 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-10 10:14:36,671 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-10 13:40:01,079 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-10 13:40:01,080 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png

@@ -25,10 +25,10 @@ Traceback (most recent call last):
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\项目\data_factory_platform\data_sync\views.py", line 48, in get_instance
+  File "D:\锟斤拷目\data_factory_platform\data_sync\views.py", line 48, in get_instance
     data_ = online.query_instance()
             ^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 20, in query_instance
+  File "D:\锟斤拷目\data_factory_platform\data_sync\business\online_data_sync.py", line 20, in query_instance
     mysql_l = jsonpath(res.json(), '$..data[?(@.db_type=="mysql")].instance_name')
                        ^^^^^^^^^^
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 975, in json
@@ -60,7 +60,7 @@ Traceback (most recent call last):
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
     return view_func(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\项目\data_factory_platform\data_sync\views.py", line 112, in add_intranet_config
+  File "D:\锟斤拷目\data_factory_platform\data_sync\views.py", line 112, in add_intranet_config
     obj = DataFactoryIntranetConfig.objects.create(name=name, host=host, user=user, password=password, port=port,
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
@@ -130,10 +130,10 @@ Traceback (most recent call last):
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\项目\data_factory_platform\data_sync\views.py", line 48, in get_instance
+  File "D:\锟斤拷目\data_factory_platform\data_sync\views.py", line 48, in get_instance
     data_ = online.query_instance()
             ^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 20, in query_instance
+  File "D:\锟斤拷目\data_factory_platform\data_sync\business\online_data_sync.py", line 20, in query_instance
     mysql_l = jsonpath(res.json(), '$..data[?(@.db_type=="mysql")].instance_name')
                        ^^^^^^^^^^
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 975, in json
@@ -165,7 +165,7 @@ Traceback (most recent call last):
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
     return view_func(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\项目\data_factory_platform\data_sync\views.py", line 112, in add_intranet_config
+  File "D:\锟斤拷目\data_factory_platform\data_sync\views.py", line 112, in add_intranet_config
     obj = DataFactoryIntranetConfig.objects.create(name=name, host=host, user=user, password=password, port=port,
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
@@ -234,10 +234,10 @@ Traceback (most recent call last):
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\项目\data_factory_platform\data_sync\views.py", line 48, in get_instance
+  File "D:\锟斤拷目\data_factory_platform\data_sync\views.py", line 48, in get_instance
     data_ = online.query_instance()
             ^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 20, in query_instance
+  File "D:\锟斤拷目\data_factory_platform\data_sync\business\online_data_sync.py", line 20, in query_instance
     mysql_l = jsonpath(res.json(), '$..data[?(@.db_type=="mysql")].instance_name')
                        ^^^^^^^^^^
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 975, in json
@@ -270,10 +270,10 @@ Traceback (most recent call last):
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\项目\data_factory_platform\data_sync\views.py", line 48, in get_instance
+  File "D:\锟斤拷目\data_factory_platform\data_sync\views.py", line 48, in get_instance
     data_ = online.query_instance()
             ^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\项目\data_factory_platform\data_sync\business\online_data_sync.py", line 20, in query_instance
+  File "D:\锟斤拷目\data_factory_platform\data_sync\business\online_data_sync.py", line 20, in query_instance
     mysql_l = jsonpath(res.json(), '$..data[?(@.db_type=="mysql")].instance_name')
                        ^^^^^^^^^^
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 975, in json
@@ -308,7 +308,7 @@ Traceback (most recent call last):
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
     return view_func(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\项目\data_factory_platform\data_sync\views.py", line 112, in add_intranet_config
+  File "D:\锟斤拷目\data_factory_platform\data_sync\views.py", line 112, in add_intranet_config
     obj = DataFactoryIntranetConfig.objects.create(name=name, host=host, user=user, password=password, port=port,
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
@@ -379,7 +379,7 @@ Traceback (most recent call last):
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
     return view_func(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\项目\data_factory_platform\data_sync\views.py", line 112, in add_intranet_config
+  File "D:\锟斤拷目\data_factory_platform\data_sync\views.py", line 112, in add_intranet_config
     obj = DataFactoryIntranetConfig.objects.create(name=name, host=host, user=user, password=password, port=port,
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
@@ -769,3 +769,129 @@ django.db.utils.IntegrityError: (1048, "Column 'name' cannot be null")
 2023-04-30 23:26:46,655 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
 2023-04-30 23:39:04,890 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
 2023-04-30 23:39:04,893 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-02 19:13:11,195 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-02 19:13:11,196 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-02 19:14:03,809 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-02 19:14:03,810 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-02 19:14:32,261 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\锟斤拷目\data_factory_platform\data_sync\views.py", line 96, in query
+    if data.get('status') == 1:
+       ^^^^^^^^
+AttributeError: 'bool' object has no attribute 'get'
+2023-05-02 19:14:47,628 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\锟斤拷目\data_factory_platform\data_sync\views.py", line 96, in query
+    if data.get('status') == 1:
+       ^^^^^^^^
+AttributeError: 'bool' object has no attribute 'get'
+2023-05-02 19:15:13,102 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\锟斤拷目\data_factory_platform\data_sync\views.py", line 96, in query
+    if data.get('status') == 1:
+       ^^^^^^^^
+AttributeError: 'bool' object has no attribute 'get'
+2023-05-04 09:44:23,693 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-04 09:44:23,695 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-04 09:44:25,253 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/sync/query_instance/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\simplejson\decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\锟斤拷目\data_factory_platform\data_sync\views.py", line 48, in get_instance
+    data_ = online.query_instance()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\锟斤拷目\data_factory_platform\data_sync\business\online_data_sync.py", line 20, in query_instance
+    mysql_l = jsonpath(res.json(), '$..data[?(@.db_type=="mysql")].instance_name')
+                       ^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-05-04 09:44:42,629 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-04 09:44:42,630 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-04 09:45:08,345 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\锟斤拷目\data_factory_platform\data_sync\views.py", line 96, in query
+    if data.get('status') == 1:
+       ^^^^^^^^
+AttributeError: 'bool' object has no attribute 'get'
+2023-05-04 09:46:14,611 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-04 09:46:14,612 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-04 13:59:33,131 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-04 13:59:33,139 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-04 13:59:34,700 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/favicon.ico
+2023-05-04 13:59:48,984 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-04 13:59:48,985 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-04 14:00:23,139 [django.request:241] [log:log_response] [ERROR] Internal Server Error: /factory/query/
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\锟斤拷目\data_factory_platform\data_sync\views.py", line 96, in query
+    if data.get('status') == 1:
+       ^^^^^^^^
+AttributeError: 'bool' object has no attribute 'get'
+2023-05-04 14:05:13,848 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-04 14:05:13,849 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
