@@ -78,6 +78,26 @@ class OnlineDataSync():
         package = {'column_list': column_list, 'rows': rows}
         return package
 
+
+
+    def main(self):
+        # 订单
+        data = self.query({"instance": 'public-order-fahuo', "database": "mabang_order", "table": "Db_OrderType22",
+                           "content": "select * from mabang_order.Db_OrderType22 where orderId in (41706860,41695842,41706858,41706859,41708314)"})
+        # data = self.query({"instance": 'public-order-fahuo', "database": "mabang_order", "table": "Db_OrderType5",
+        #                    "content": "select * from mabang_order.Db_OrderType5 where orderId in (21488888,21474489,21477465,21492521)"})
+        ctx = self.data_assemble(data)
+        print(ctx)
+        condition = {"host": "192.168.2.43", "port": 3306, "user": "mabang", "password": "mabang123",
+                     "database": "mabang_order", "table": 'Db_OrderType22'}
+        id = self.intranet_data_storage(data=ctx, condition=condition)
+        return id
+
+
+class IntranetDataBase():
+
+    def get_instance(self):
+            pass
     @staticmethod
     def intranet_data_storage(data: dict, condition: dict):
         '''
@@ -94,21 +114,6 @@ class OnlineDataSync():
                 if result:
                     ids.append(result)
         return ids
-
-    def main(self):
-        # 订单
-        data = self.query({"instance": 'public-order-fahuo', "database": "mabang_order", "table": "Db_OrderType22",
-                           "content": "select * from mabang_order.Db_OrderType22 where orderId in (41706860,41695842,41706858,41706859,41708314)"})
-        # data = self.query({"instance": 'public-order-fahuo', "database": "mabang_order", "table": "Db_OrderType5",
-        #                    "content": "select * from mabang_order.Db_OrderType5 where orderId in (21488888,21474489,21477465,21492521)"})
-        ctx = self.data_assemble(data)
-        print(ctx)
-        condition = {"host": "192.168.2.43", "port": 3306, "user": "mabang", "password": "mabang123",
-                     "database": "mabang_order", "table": 'Db_OrderType22'}
-        id = self.intranet_data_storage(data=ctx, condition=condition)
-        return id
-
-
 if __name__ == '__main__':
     on = OnlineDataSync()
     id = on.main()
