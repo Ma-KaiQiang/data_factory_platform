@@ -69,9 +69,25 @@ def get_intranet_db(request):
             user = instance.user
             password = instance.password
             port = instance.port
-            with PyMysqlBase(host=host, usr=user, pwd=password, port=int(port),database=db_name) as p:
+            with PyMysqlBase(host=host, usr=user, pwd=password, port=int(port), database=db_name) as p:
                 data = p.get_tables()
                 data_ = list(map(lambda x: x[0], data))
+            return JsonResponse({"success": True, "error": None, "data": data_})
+
+
+def get_online_db(request):
+    if request.method == 'GET':
+        instance_name = request.GET.get("instance", None)
+        db_name = request.GET.get("database", None)
+        online = OnlineDataSync()
+        if instance_name == 'undefined':
+            data_ = online.query_instance()
+            return JsonResponse({"success": True, "error": None, "data": data_})
+        elif instance_name != 'undefined' and db_name == 'undefined':
+            data_ = online.query_database(instance_name=instance_name)
+            return JsonResponse({"success": True, "error": None, "data": data_})
+        else:
+            data_ = online.query_table(instance_name=instance_name, db_name=db_name)
             return JsonResponse({"success": True, "error": None, "data": data_})
 
 

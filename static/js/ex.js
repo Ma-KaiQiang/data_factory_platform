@@ -1,3 +1,112 @@
+ window.onload = function () {
+            // 动态加载省份选项数据
+            initSelectOptions("instance", "query_instance");
+        };// onReady
+        function removeAll(ele) {
+            //根据id查找对象，
+            var selectObj = document.getElementById(ele);
+            //将select的options置为0
+            selectObj.options.length = 0;
+        }
+
+        /**
+         * 动态生成select选项
+         * @param selectId
+         * @param parentId
+         * @param instance
+         * @param database
+         * @returns
+         */
+
+        function initSelectOptions(selectId, parentId, instance = null, database = null) {
+            var selectObj = $("#" + selectId);
+            var optgroupObj = $("#" + parentId);
+            $.ajax({
+                url: "http://127.0.0.1:8001/factory/online/data/",
+                async: false,
+                type: "GET",
+                data: "instance=" + instance + '&' + "database=" + database,
+                success: function (result) {
+                    if (result.success) {
+                        var configs = result.data;
+                        selectObj.find().remove();
+                        for (var i in configs) {
+                            var optionValue = configs[i];
+                            selectObj.append(new Option(optionValue, optionValue));
+                        }
+                        // 刷新select
+                        optgroupObj.selectpicker('render');
+                        optgroupObj.selectpicker('refresh');
+                    } else {
+                        console.log('获取[' + parentId + ']信息失败，原因：' + result.errorMessage);
+                    }
+                },
+                error: function (result) {
+                    console.log('获取[' + parentId + ']信息失败，原因：' + result.errorMessage);
+                }
+            });// ajax
+        }
+
+        function initDatabase() {
+            // 当实例变更清除数据库，表并刷新
+            removeAll('query_db');
+            removeAll('query_tb');
+            $("#query_tb").selectpicker('refresh');
+            $("#limit_num").selectpicker('refresh');
+            var instanceSel = $("#query_instance").val();
+            initSelectOptions('database', 'query_db', instanceSel);
+
+
+        }
+
+        function initTable() {
+            // 当数据库变更时，清空表并刷新
+            var instanceSel = $("#query_instance").val();
+            var dbSel = $("#query_db").val();
+            removeAll('query_tb');
+            $("#query_tb").selectpicker('refresh');
+            initSelectOptions('table', 'query_tb', instanceSel, dbSel);
+        }
+
+
+
+
+        function sqlquery_validate() {
+            var result = true;
+            var instance_name = $("#query_instance").val();
+            var db_name = $("#query_db").val();
+            var sqlContent = editor.getValue();
+
+            var select_sqlContent = editor.session.getTextRange(editor.getSelectionRange());
+            if (select_sqlContent) {
+                sqlContent = select_sqlContent
+            }
+            if (!instance_name) {
+                alert("请选择实例！");
+                result = false;
+            } else if (!db_name) {
+                alert("请选择数据库！");
+                result = false;
+            } else if (!sqlContent) {
+                alert("SQL内容不能为空！");
+                result = false;
+            }
+            return result;
+        }
+
+        //先做表单验证，验证成功再成功提交查询请求
+        var validate = function () {
+            if (sqlquery_validate()) {
+                sqlquery();
+            }
+        };
+
+
+
+
+
+
+
 
 function tab() {
     var lis = document.querySelectorAll('#tab_>ul')
