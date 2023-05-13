@@ -11,14 +11,24 @@ class Authorization(models.Model):
 
 
 class DataFactoryIntranetConfig(models.Model):
-    name = models.CharField(max_length=125, unique=True,default=None)
-    host = models.GenericIPAddressField(unique=True,default=None)
+    name = models.CharField(max_length=125, unique=True, default=None)
+    host = models.GenericIPAddressField(unique=True, default=None)
     port = models.CharField(max_length=10, default=3306)
-    user = models.CharField(max_length=125,default=None)
-    password = models.CharField(max_length=125,default=None)
+    user = models.CharField(max_length=125, default=None)
+    password = models.CharField(max_length=125, default=None)
     remark = models.CharField(max_length=1000, null=True, default=None)
     c_time = models.DateTimeField(auto_now_add=True)
     u_time = models.DateTimeField(auto_now=True)
 
     class Meta:
         db_table = "t_intranet_config"
+
+#
+# class DataSyncRecord(models.Model):
+#     module = ''
+#     sql_content = models.CharField(max_length=255)
+#     c_time = models.DateTimeField(auto_now_add=True)
+#     u_time = models.DateTimeField(auto_now=True)
+#
+#     class Meta:
+#         db_table = 't_sync_records'

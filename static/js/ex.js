@@ -101,13 +101,6 @@
             }
         };
 
-
-
-
-
-
-
-
 function tab() {
     var lis = document.querySelectorAll('#tab_>ul')
     for (var i = 0; i < lis.length; i++) {

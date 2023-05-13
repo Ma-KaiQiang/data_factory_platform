@@ -3,7 +3,6 @@ from django.urls import path, include
 from data_sync.views import *
 
 urlpatterns = [
-    path('index/', index),
     path('data_sync/', online_data_sync, name='data_sync'),
     path('intranet/list/', get_intranet_config, name='get_intranet_config'),
     path('intranet/data/', get_intranet_db, name='get_intranet_db'),

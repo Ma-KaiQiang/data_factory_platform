@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from data_sync.views import online_data_sync
-
+from accredit.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('factory/', include('data_sync.urls')),
+    path('login/', login),
+    path('index/', index),
+    path('register/', register),
 
 ]

@@ -14,10 +14,6 @@ from data_sync.util.mysql_handle import PyMysqlBase
 logger = logging.getLogger("django")
 
 
-def index(request):
-    return render(request, "index.html", {})
-
-
 def get_header(request):
     return headers()
 
@@ -50,8 +46,7 @@ def get_intranet_db(request):
         db_name = request.GET.get("database", None)
         if instance_name == 'undefined':
             fields = ["id", "name", "host", "port", "user", "password", "remark"]
-            data_l = list(DataFactoryIntranetConfig.objects.values_list(*fields))
-            data = [dict(zip(fields, l)) for l in data_l]
+            data = list(DataFactoryIntranetConfig.objects.values_list('name'))
             return JsonResponse({'success': True, 'data': data})
         elif instance_name != 'undefined' and db_name == 'undefined':
             instance = DataFactoryIntranetConfig.objects.get(name=instance_name)
@@ -91,36 +86,11 @@ def get_online_db(request):
             return JsonResponse({"success": True, "error": None, "data": data_})
 
 
-def get_instance(request):
-    if request.method == "GET":
-        online = OnlineDataSync()
-        data_ = online.query_instance()
-        return JsonResponse({"success": True, "error": None, "data": data_})
-
-
-def get_database(request):
-    if request.method == "GET":
-        online = OnlineDataSync()
-        instance_name = request.GET.get("instance")
-        data_ = online.query_database(instance_name=instance_name)
-        return JsonResponse({"success": True, "error": None, "data": data_})
-
-
-def get_table(request):
-    if request.method == "GET":
-        online = OnlineDataSync()
-        instance_name = request.GET.get("instance")
-        db_name = request.GET.get("database")
-        data_ = online.query_table(instance_name=instance_name, db_name=db_name)
-        return JsonResponse({"success": True, "error": None, "data": data_})
-
-
 @csrf_exempt
 def query(request):
     if request.method == "POST":
         on = OnlineDataSync()
         pat = json.loads(request.body.decode(encoding='utf8'))
-        print(pat)
         instance_name = pat.get("instance_name")
         db_name = pat.get("db_name")
         tb_name = pat.get("tb_name")
@@ -133,10 +103,11 @@ def query(request):
             "sql_content": sql_content,
             "limit_num": limit_num
         })
-        if data.get('status') == 1:
+        if data:
             return JsonResponse(data)
-        # query_data = on.data_assemble(data)
-        return JsonResponse(data)
+        else:
+
+            return JsonResponse({"success": False, 'msg': 'sql拼写有误'})
 
 
 # 内网数据库配置
