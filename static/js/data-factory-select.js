@@ -75,18 +75,22 @@ class SelectHandle {
     }
 
     initIntranetSelect() {
+        var instance = null
+        var database = null
+        var table = null
         this.in_select_btn.onclick = function () {
             that.initSelect($(that.in_instance_id), $(that.in_instance_opt_id), undefined, undefined, that.in_url, [$(that.in_instance_id), $(that.in_db_id), $(that.in_tb_id)])
         }
         this.in_instance_id.onchange = function () {
-            var instance = $(that.in_instance_id).val()
+            instance = $(that.in_instance_id).val()
             that.initSelect($(that.in_db_id), $(that.in_db_opt_id), instance, undefined, that.in_url, [$(that.in_tb_id), $(that.in_tb_id)])
         }
         this.in_db_id.onchange = function () {
-            var instance = $(that.in_instance_id).val()
-            var database = $(that.in_db_id).val()
+            database = $(that.in_db_id).val()
             that.initSelect($(that.in_tb_id), $(that.in_tb_opt_id), instance, database, that.in_url, [$(that.in_tb_id)])
+            table = $(that.in_tb_id).val()
         }
+        return [instance, database, table]
     }
 
     select_validate() {
@@ -147,6 +151,7 @@ class SelectHandle {
                 striped: true,
                 toolbar: '#toolbar',
                 total: result.total,
+                singleSelect: true,
                 pagination: true,
                 pageSize: 30,//每页的记录行数（*）
                 pageList: [10, 20, 30, 50], //可供选择的每页的行数（*）
@@ -215,6 +220,57 @@ class SelectHandle {
 
     }
 }
+
+class DataSync extends SelectHandle {
+    constructor() {
+        super()
+        this.sync_btn = document.querySelector('#sync-btn')
+        this.query_table = document.querySelector('#query_result')
+
+    }
+
+
+    get_select($ele) {
+        return ele.bootstrapTable('getSelections')
+    }
+
+    get_select_val(args) {
+        var vals = []
+        for (var i in args) {
+            vals.push(args[i])
+        }
+        return vals
+    }
+
+    public() {
+        var vals = this.get_select_val([$(this.in_instance_id), $(this.in_db_id), $(this.in_tb_id)])
+        var rows = this.get_select($(this.query_table))
+        console.log(vals,rows)
+        this.sync_request('',rows,vals)
+    }
+
+
+    sync_request(url, data, sync_condition) {
+        $.ajax({
+            type: 'port',
+            url: url,
+            dataType: 'json',
+            data: JSON.stringify({
+                data: data,
+                condition: sync_condition
+            }),
+            success: function (data) {
+                console.log(data)
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(errorThrown);
+            }
+        })
+
+
+    }
+}
+
 
 var sel = new SelectHandle()
 sel.main()

@@ -176,7 +176,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="submit"
+                                                    <button id="sync-btn" type="submit"
                                                             class="btn btn-primary waves-effect waves-light">同步
                                                     </button>
                                                     <button type="button" class="btn btn-danger waves-effect"
@@ -235,7 +235,6 @@
             for (var i = 0; i < lis.length; i++) {
                 lis[i].removeAttribute('class')
             }
-
         }
         function tab() {
             var lis = document.querySelectorAll('#tab_>ul>li')
@@ -251,11 +250,6 @@
         }
 
         tab()
-
-    </script>
-    <!--数据展示-->
-    <script>
-        //展示数据
 
     </script>
 {% endblock %}

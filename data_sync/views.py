@@ -1,8 +1,8 @@
 import logging
 
 from django.shortcuts import render, redirect
-from data_sync.business.online_data_sync import OnlineDataSync
-from django.http import JsonResponse, HttpResponse
+from data_sync.business.online_data_sync import OnlineDataSync, IntranetDataBase
+from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 from data_sync.models import DataFactoryIntranetConfig
@@ -20,6 +20,11 @@ def get_header(request):
 
 @csrf_exempt
 def online_data_sync(request):
+    '''
+    将选中的外网数据同步至内网
+    :param request:
+    :return:
+    '''
     if request.method == "POST":
         d = {
             "host": "192.168.2.43",
@@ -29,11 +34,9 @@ def online_data_sync(request):
             "user": "mabang",
             "password": "mabang123"
         }
-        online = OnlineDataSync()
-        condition = request.body
-        online_data = online.query(json.loads(condition))
-        package = online.data_assemble(online_data)
-        id = online.intranet_data_storage(package, condition=d)
+        intranet_data = IntranetDataBase()
+        condition = json.loads(request.body)
+        id = intranet_data.intranet_data_storage(data={}, condition=condition)
         return JsonResponse({"id": id})
     if request.method == "GET":
         return render(request, "data_sync.html")
@@ -41,6 +44,11 @@ def online_data_sync(request):
 
 @csrf_exempt
 def get_intranet_db(request):
+    '''
+    获取内网数据库列表
+    :param request:
+    :return:
+    '''
     if request.method == 'GET':
         instance_name = request.GET.get("instance", None)
         db_name = request.GET.get("database", None)
@@ -71,6 +79,11 @@ def get_intranet_db(request):
 
 
 def get_online_db(request):
+    '''
+    获取线上数据库列表
+    :param request:
+    :return:
+    '''
     if request.method == 'GET':
         instance_name = request.GET.get("instance", None)
         db_name = request.GET.get("database", None)
@@ -88,6 +101,11 @@ def get_online_db(request):
 
 @csrf_exempt
 def query(request):
+    '''
+    查询线上表数据
+    :param request:
+    :return:
+    '''
     if request.method == "POST":
         on = OnlineDataSync()
         pat = json.loads(request.body.decode(encoding='utf8'))
@@ -112,6 +130,11 @@ def query(request):
 
 # 内网数据库配置
 def get_intranet_config(request):
+    '''
+    获取内网配置列表
+    :param request:
+    :return:
+    '''
     if request.method == "GET":
         fields = ["id", "name", "host", "port", "user", "password", "remark"]
         data_l = list(DataFactoryIntranetConfig.objects.values_list(*fields))
@@ -121,6 +144,11 @@ def get_intranet_config(request):
 
 @csrf_exempt
 def add_intranet_config(request):
+    '''
+    添加内网配置
+    :param request:
+    :return:
+    '''
     if request.method == "POST":
         name = request.POST.get("config-name")
         host = request.POST.get("config-host")
@@ -138,6 +166,11 @@ def add_intranet_config(request):
 
 @csrf_exempt
 def update_intranet_config(request):
+    '''
+    更新内网配置
+    :param request:
+    :return:
+    '''
     if request.method == "POST":
         name = request.POST.get("config-name")
         host = request.POST.get("config-host")
@@ -153,6 +186,11 @@ def update_intranet_config(request):
 
 @csrf_exempt
 def delete_intranet_config(request):
+    '''
+    删除内网配置
+    :param request:
+    :return:
+    '''
     if request.method == "POST":
         data = json.loads(request.body.decode(encoding="utf8"))
         DataFactoryIntranetConfig.objects.filter(id=data.get("id")).delete()

@@ -96,8 +96,6 @@ class OnlineDataSync():
 
 class IntranetDataBase():
 
-    def get_instance(self):
-            pass
     @staticmethod
     def intranet_data_storage(data: dict, condition: dict):
         '''
