@@ -1,5 +1,37 @@
 var that
+var ip = '127.0.0.1:8001'
 
+
+class Authentication{
+    constructor() {
+    }
+
+    login(){
+        
+
+    }
+    register(){
+
+
+
+    }
+
+
+}
+class PageRouting {
+    constructor() {
+        this.login = document.querySelector('#btn-login')
+        this.register_now = document.querySelector('#register_now')
+    }
+
+
+    main() {
+        this.register_now.onclick = window.navigate(ip + '/register/')
+    }
+
+}
+
+//下拉框动态加载及数据展示
 class SelectHandle {
     constructor() {
         that = this
@@ -221,6 +253,7 @@ class SelectHandle {
     }
 }
 
+//数据同步
 class DataSync extends SelectHandle {
     constructor() {
         super()
@@ -228,12 +261,9 @@ class DataSync extends SelectHandle {
         this.query_table = document.querySelector('#query_result')
 
     }
-
-
     get_select($ele) {
         return ele.bootstrapTable('getSelections')
     }
-
     get_select_val(args) {
         var vals = []
         for (var i in args) {
@@ -245,8 +275,8 @@ class DataSync extends SelectHandle {
     public() {
         var vals = this.get_select_val([$(this.in_instance_id), $(this.in_db_id), $(this.in_tb_id)])
         var rows = this.get_select($(this.query_table))
-        console.log(vals,rows)
-        this.sync_request('',rows,vals)
+        console.log(vals, rows)
+        this.sync_request('', rows, vals)
     }
 
 
@@ -266,11 +296,11 @@ class DataSync extends SelectHandle {
                 alert(errorThrown);
             }
         })
-
-
     }
 }
 
 
 var sel = new SelectHandle()
+var page=new PageRouting()
+page.main()
 sel.main()

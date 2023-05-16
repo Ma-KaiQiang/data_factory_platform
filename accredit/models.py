@@ -7,9 +7,11 @@ class User(models.Model):
     email = models.EmailField(unique=True)
     user_name = models.CharField(max_length=16, unique=True)
     password = models.CharField(max_length=32)
-    token = models.CharField(max_length=255,default=None)
-    status = models.IntegerField(default=1)
-    c_time = models.DateTimeField(auto_now_add=True)
+    token = models.CharField(max_length=255, default=None)
+    status = models.IntegerField(default=1, verbose_name='状态 0:关闭 1:正常 2:异常')
+    login_time = models.DateTimeField(default=None, verbose_name='登录时间')
+    c_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+    u_time = models.DateTimeField(auto_now=True, verbose_name='更新时间')
 
     def __str__(self):
         return self.user_name
