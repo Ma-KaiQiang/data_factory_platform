@@ -8,3 +8,7 @@ Traceback (most recent call last):
   File "C:\Users\admin\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
     raise ValueError(
 ValueError: The view accredit.views.login didn't return an HttpResponse object. It returned None instead.
+2023-05-16 16:09:32,395 [django.request:241] [log:log_response] [WARNING] Not Found: /favicon.ico
+2023-05-16 16:10:05,419 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/users/avatar-1.jpg
+2023-05-16 16:10:05,421 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/logo-sm.png
+2023-05-16 16:10:05,703 [django.request:241] [log:log_response] [WARNING] Not Found: /factory/static/images/favicon.ico

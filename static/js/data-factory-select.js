@@ -2,22 +2,17 @@ var that
 var ip = '127.0.0.1:8001'
 
 
-class Authentication{
+class Authentication {
     constructor() {
     }
 
-    login(){
-        
-
-    }
-    register(){
-
-
-
+    login() {
     }
 
-
+    register() {
+    }
 }
+
 class PageRouting {
     constructor() {
         this.login = document.querySelector('#btn-login')
@@ -261,9 +256,11 @@ class DataSync extends SelectHandle {
         this.query_table = document.querySelector('#query_result')
 
     }
+
     get_select($ele) {
         return ele.bootstrapTable('getSelections')
     }
+
     get_select_val(args) {
         var vals = []
         for (var i in args) {
@@ -301,6 +298,6 @@ class DataSync extends SelectHandle {
 
 
 var sel = new SelectHandle()
-var page=new PageRouting()
+var page = new PageRouting()
 page.main()
 sel.main()
