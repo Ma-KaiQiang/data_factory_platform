@@ -1,15 +1,62 @@
 var that
 var ip = '127.0.0.1:8001'
 
-
+function request(method, url, data = null, callback) {
+     console.log(url)
+    const p = new Promise(
+        (resolve, reject) => {
+            const xhr = new XMLHttpRequest();
+            xhr.open(method,url)
+            xhr.send(data);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        resolve(xhr.response);
+                    } else {
+                        reject(xhr.status)
+                    }
+                }
+            }
+        });
+    p.then(function (value) {
+        const res = JSON.parse(value);
+        callback(res.result);
+    }, function (reason) {
+        console.error(reason);
+    })
+}
+var ta
 class Authentication {
     constructor() {
+        ta=this
+        this.email = document.getElementById('email')
+        this.username = document.getElementById('username')
+        this.password = document.getElementById('email')
+        this.register_button = document.getElementById('btn-register')
+
+    }
+
+    get_register_text() {
+        console.log(123123)
+        var email = ta.email.value
+        console.log(email)
+        var username = ta.username.value
+        var password = ta.password.value
+        return `email=${email}&username=${username}&password=${password}`
     }
 
     login() {
     }
 
     register() {
+        console.log(ta.get_register_text)
+        request('post', ip + '/register/', data, function (res) {
+            console.log(res)
+        })
+    }
+
+    main() {
+        this.register_button.onclick = this.register
     }
 }
 
@@ -19,11 +66,9 @@ class PageRouting {
         this.register_now = document.querySelector('#register_now')
     }
 
-
     main() {
         this.register_now.onclick = window.navigate(ip + '/register/')
     }
-
 }
 
 //下拉框动态加载及数据展示
@@ -297,7 +342,9 @@ class DataSync extends SelectHandle {
 }
 
 
-var sel = new SelectHandle()
-var page = new PageRouting()
-page.main()
-sel.main()
+//var sel = new SelectHandle()
+//var page = new PageRouting()
+var auth=new Authentication()
+//page.main()
+//sel.main()
+auth.main()

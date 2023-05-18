@@ -10,31 +10,28 @@
     <title>注册</title>
 </head>
 <body>
-<form action="/register/" method="post">
     <div class="container">
         <div class="main-title">欢迎注册</div>
-
         <div class="main">
             <div class="in-con">
-                <input type="text" name="email" placeholder="请输入邮箱" autofocus>
+                <input type="text" id="email" placeholder="请输入邮箱" autofocus>
                 <i>E</i>
             </div>
             <div class="in-con">
-                <input type="text" name="username" placeholder="请输入用户名" autofocus>
+                <input type="text" id="username" placeholder="请输入用户名" autofocus>
                 <i>U</i>
             </div>
 
             <div class="in-con">
-                <input type="password" name="password" placeholder="密码">
+                <input type="password" id="password" placeholder="密码">
                 <i class="key">P</i>
             </div>
             <div class="in-con">
-                <input type="password" id="password" placeholder="确认密码">
+                <input type="password"  placeholder="确认密码">
                 <i class="key">P</i>
             </div>
-
             <div class="in-con">
-                <button type="submit" id="btn-login" class="btn-login">注 册</button>
+                <button type="button" id="btn-register" class="btn-login">注 册</button>
             </div>
             <div class="in-con">
                 <br>
@@ -42,11 +39,11 @@
             </div>
         </div>
     </div>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/data-factory-select.js' %}"></script>
 
-</form>
 
-<script src="/static/bootstrap/js/bootstrap.min.js"></script>
-<script src="/static/base/js/jquery-3.6.3.js"></script>
-<script src="/static/bootstrap/js/popper.js"></script>
 </body>
 </html>
