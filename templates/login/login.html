@@ -9,32 +9,30 @@
     <title>登陆</title>
 </head>
 <body>
-<form action="/login/" method="post" enctype="multipart/form-data">
-    <div class="container">
-        <div class="main-title" style="font-size: 40px">数据管理平台</div>
-        <div class="main">
-            <div class="main-title" style="font-size: 20px">登录</div>
-            <div class="in-con">
-                <input type="text" name="username" placeholder="请输入用户名" autofocus>
-                <i>U</i>
-            </div>
-            <div class="in-con">
-                <input type="password" name="password" placeholder="密码">
-                <i class="key">P</i>
-            </div>
-            <div class="in-con">
-                <button type="submit" id="btn-login" class="btn-login">登 录</button>
-            </div>
-            <div class="in-con">
-                <br>
-                <p class="aaa">还没有帐号？<a id="register_now" href="/register/">立即注册</a></p>
-            </div>
+<div class="container">
+    <div class="main-title" style="font-size: 40px">数据管理平台</div>
+    <div class="main">
+        <div class="main-title" style="font-size: 20px">登录</div>
+        <div class="in-con">
+            <input type="text" id="login-user" name="username" placeholder="请输入用户名" autofocus>
+            <i>U</i>
+        </div>
+        <div class="in-con">
+            <input type="password" id="login-pwd" name="password" placeholder="密码">
+            <i class="key">P</i>
+        </div>
+        <div class="in-con">
+            <button type="button" id="login_btn" class="btn-login">登 录</button>
+        </div>
+        <div class="in-con">
+            <br>
+            <p class="aaa">还没有帐号？<a id="register_now" href="/register/">立即注册</a></p>
         </div>
     </div>
-</form>
-
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</div>
 <script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/popper.js' %}"></script>
+<script type="module" src="{% static 'js/Auth/login.js' %}"></script>
 </body>
 </html>
